@@ -1,0 +1,60 @@
+/* =========================================================
+   Tokens — Movimento Bahia pela Educação
+   Cores amostradas dos vetores originais da marca (logo PDF).
+   Tipografia: substitutas temporárias declaradas (ver docs/).
+   ========================================================= */
+
+@font-face { font-family: "Montserrat"; font-weight: 600; font-style: normal; font-display: swap; src: url("../fonts/montserrat-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-weight: 700; font-style: normal; font-display: swap; src: url("../fonts/montserrat-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-weight: 800; font-style: normal; font-display: swap; src: url("../fonts/montserrat-latin-800-normal.woff2") format("woff2"); }
+@font-face { font-family: "Caveat"; font-weight: 600; font-style: normal; font-display: swap; src: url("../fonts/caveat-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 400; font-style: normal; font-display: swap; src: url("../fonts/source-sans-3-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 600; font-style: normal; font-display: swap; src: url("../fonts/source-sans-3-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 700; font-style: normal; font-display: swap; src: url("../fonts/source-sans-3-latin-700-normal.woff2") format("woff2"); }
+
+:root {
+  /* Marca — cores do lápis */
+  --mbe-red:     #ED2734;
+  --mbe-orange:  #F2992D;
+  --mbe-purple:  #6E44A5;
+  --mbe-indigo:  #4E48A6;
+  --mbe-blue:    #2A4CA5;
+  --mbe-cyan:    #48B9D6;
+  --mbe-ink:     #16171D; /* lettering da marca (#040606) suavizado p/ texto longo */
+
+  /* Derivadas para interface (contraste AA) */
+  --blue-700:   #1F3C88;   /* hover de botões */
+  --blue-900:   #172656;   /* faixa "Como está a Bahia?" */
+  --purple-600: #5E3994;   /* texto roxo sobre branco (AA) */
+  --orange-700: #94500A;   /* texto laranja sobre claro (AA) */
+  --red-600:    #C81E2A;   /* linha de margem / texto */
+  --cyan-700:   #1B7690;
+
+  --paper:      #FBFAF6;   /* papel do caderno */
+  --paper-2:    #F3F1EA;
+  --line:       #DCE9F1;   /* pauta */
+  --rule:       #E4E1D8;   /* divisórias */
+  --muted:      #555A66;
+  --white:      #FFFFFF;
+
+  --grad-brand: linear-gradient(90deg, var(--mbe-red), var(--mbe-orange) 30%, var(--mbe-purple) 62%, var(--mbe-blue) 82%, var(--mbe-cyan));
+
+  /* Tipografia */
+  --font-head: "Montserrat", "TCCC Unity Headline", system-ui, sans-serif;
+  --font-body: "Source Sans 3", "Myriad Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --fs-0: 1rem;        /* 16–17 px corpo */
+  --fs-1: 1.125rem;
+  --fs-2: clamp(1.25rem, 1.1rem + .5vw, 1.5rem);
+  --fs-3: clamp(1.6rem, 1.25rem + 1.3vw, 2.4rem);
+  --fs-4: clamp(2.2rem, 1.5rem + 3vw, 4.25rem);
+  --fs-meta: clamp(4.5rem, 2.8rem + 8vw, 9.5rem);
+
+  /* Espaço */
+  --gap: clamp(1rem, .6rem + 1.4vw, 2rem);
+  --sec: clamp(4rem, 2.6rem + 5vw, 7.5rem);
+  --wrap: 1240px;
+  --radius: 6px;
+  --header-h: 84px;
+  --pauta: 34px;       /* espaçamento da pauta do caderno */
+}

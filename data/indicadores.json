@@ -1,0 +1,268 @@
+{
+  "_sobre": "Dados da home, separados da apresentação. origem: documento = documentos do projeto; movimento = comunicação oficial do Movimento (Instagram @bahiapelaeducacao); fieb = notícias oficiais do Portal FIEB (articulador); publica = MEC/Inep; imprensa = notícia de terceiros; lovable = modelo Lovable; ilustrativo = criado para demonstração. Nada aqui foi validado pela equipe do BI: antes da publicação institucional, valores devem ser confirmados.",
+  "rotulo_ilustrativo": "Dados ilustrativos para apresentação. Sujeitos à validação.",
+  "meta": {
+    "valor": 80,
+    "unidade": "%",
+    "ano": 2030,
+    "fonte": "Compromisso Nacional Criança Alfabetizada (MEC)",
+    "origem": "documento"
+  },
+  "ica_serie": {
+    "nome": "Indicador Criança Alfabetizada (ICA) — Bahia, rede pública",
+    "pontos": [
+      {
+        "ano": 2023,
+        "valor": 37,
+        "origem": "publica",
+        "fonte": "MEC/Inep — Panorama Rede Pública BA (out/2024): 36,8%"
+      },
+      {
+        "ano": 2024,
+        "valor": 36,
+        "origem": "fieb",
+        "fonte": "Portal FIEB (03/03/2026), citando o MEC: 36%"
+      },
+      {
+        "ano": 2025,
+        "valor": 56,
+        "origem": "movimento",
+        "fonte": "Instagram oficial do Movimento, 31/08/2026: 56% (decisão do responsável em 05/11/2026)"
+      }
+    ],
+    "metas_intermediarias": [
+      {
+        "ano": 2024,
+        "valor": 43.4
+      },
+      {
+        "ano": 2025,
+        "valor": 50.2
+      },
+      {
+        "ano": 2026,
+        "valor": 57.1
+      },
+      {
+        "ano": 2028,
+        "valor": 69.8
+      },
+      {
+        "ano": 2030,
+        "valor": 80
+      }
+    ],
+    "metas_fonte": "MEC/Inep — Panorama Rede Pública BA (out/2024)",
+    "conflito": "ICA 2025: o Instagram do Movimento informa 56%; o Portal FIEB (25/03 e abr/2026, citando o MEC), a imprensa e o Lovable informam 55%. Posição no ranking: requisitos e FIEB (mar/2026) citam a última posição; FIEB (abr/2026) cita a 24ª."
+  },
+  "distancia_meta": {
+    "valor": 24,
+    "unidade": "p.p.",
+    "calculo": "80% − 56%",
+    "origem": "movimento"
+  },
+  "ideb": {
+    "pontos": [
+      {
+        "ano": 2023,
+        "valor": 4.9
+      },
+      {
+        "ano": 2025,
+        "valor": 5.4
+      }
+    ],
+    "escala": "0 a 10",
+    "origem": "imprensa",
+    "fonte": "Notícia sobre o IDEB 2025 (ago/2026); confirmar com Inep/BI"
+  },
+  "destaques_municipais": {
+    "ano": 2025,
+    "origem": "lovable",
+    "lista": [
+      {
+        "nome": "Licínio de Almeida",
+        "valor": 99
+      },
+      {
+        "nome": "Malhada de Pedras",
+        "valor": 96
+      },
+      {
+        "nome": "Itatim",
+        "valor": 94
+      },
+      {
+        "nome": "Mortugaba",
+        "valor": 94
+      },
+      {
+        "nome": "Itiruçu",
+        "valor": 92
+      },
+      {
+        "nome": "Caatiba",
+        "valor": 92
+      },
+      {
+        "nome": "Érico Cardoso",
+        "valor": 91
+      },
+      {
+        "nome": "Pintadas",
+        "valor": 91
+      },
+      {
+        "nome": "Jacaraci",
+        "valor": 90
+      }
+    ]
+  },
+  "encontros_2026": {
+    "origem": "fieb",
+    "fonte": "Portal FIEB, 03/03/2026 (agenda) e 15/07/2026 (balanço)",
+    "agenda": [
+      {
+        "data": "2026-03-10",
+        "cidade": "Juazeiro"
+      },
+      {
+        "data": "2026-03-31",
+        "cidade": "Ilhéus"
+      },
+      {
+        "data": "2026-04-14",
+        "cidade": "Feira de Santana"
+      },
+      {
+        "data": "2026-04-28",
+        "cidade": "Vitória da Conquista"
+      },
+      {
+        "data": "2026-05-12",
+        "cidade": "Barreiras"
+      },
+      {
+        "data": "2026-05-26",
+        "cidade": "Eunápolis"
+      },
+      {
+        "data": "2026-06-09",
+        "cidade": "Salvador"
+      }
+    ],
+    "participantes": 1154,
+    "municipios_representados": 254
+  },
+  "par": {
+    "origem": "fieb",
+    "carga_horaria": 40,
+    "professores": {
+      "valor": 1800,
+      "prefixo": "cerca de",
+      "fonte": "Portal FIEB, set/2026 ('cerca de 1.800 professores alfabetizadores')"
+    },
+    "municipios": {
+      "valor": 31,
+      "fonte": "Portal FIEB, 15/07/2026 ('31 municípios baianos')"
+    },
+    "municipios_citados": [
+      "Lamarão",
+      "Olindina",
+      "Aramari",
+      "Presidente Dutra",
+      "Santanópolis",
+      "Ibirapitanga",
+      "Casa Nova",
+      "Rio do Pires",
+      "Pedrão",
+      "Saúde"
+    ],
+    "municipios_citados_fonte": "Portal FIEB, 25/03 e abr/2026 (lista parcial)"
+  },
+  "premio": {
+    "primeira_edicao": {
+      "ouro": [
+        "Quixabeira",
+        "Novo Horizonte",
+        "Malhada de Pedras"
+      ],
+      "criterio": "70% ou mais de crianças alfabetizadas (nível 4 do ICA)",
+      "origem": "fieb"
+    },
+    "segunda_edicao": {
+      "edicao": "2025/2026",
+      "data": "2026-11-27",
+      "origem": "movimento",
+      "fonte": "Instagram oficial, 27/10/2026"
+    }
+  },
+  "resultados": {
+    "periodo": "mar. a out. de 2026",
+    "municipios_representados": {
+      "valor": 254,
+      "base": 417,
+      "origem": "fieb",
+      "descricao": "municípios representados nos Encontros Territoriais"
+    },
+    "professores": {
+      "valor": 1800,
+      "origem": "fieb",
+      "descricao": "professores alfabetizadores no PAR, em 31 municípios"
+    },
+    "gestores": {
+      "valor": 1154,
+      "origem": "fieb",
+      "descricao": "participantes dos 7 Encontros Territoriais (gestores e equipes técnicas)"
+    },
+    "formacoes": {
+      "valor": 10,
+      "unidade": "encontros formativos",
+      "origem": "fieb",
+      "composicao": [
+        {
+          "rotulo": "Encontros Territoriais",
+          "valor": 7,
+          "origem": "fieb"
+        },
+        {
+          "rotulo": "Aulas da trilha Alfabetização Inclusiva",
+          "valor": 3,
+          "origem": "fieb"
+        }
+      ],
+      "nota": "Além dos encontros, o PAR é uma trilha contínua de 40 horas."
+    },
+    "satisfacao": {
+      "valor": 4.6,
+      "escala": "1 a 5",
+      "respostas": 812,
+      "origem": "ilustrativo",
+      "distribuicao": [
+        {
+          "nota": 5,
+          "pct": 68
+        },
+        {
+          "nota": 4,
+          "pct": 26
+        },
+        {
+          "nota": 3,
+          "pct": 5
+        },
+        {
+          "nota": 2,
+          "pct": 1
+        },
+        {
+          "nota": 1,
+          "pct": 0
+        }
+      ]
+    },
+    "pendencia_contagem": "Participantes de encontros são participações e podem incluir a mesma pessoa em mais de um evento. Professores do PAR e participantes dos encontros não devem ser somados."
+  },
+  "atualizado_em": "2026-11-05",
+  "_atualizado_nota": "Data da última atualização dos dados exibidos (RN02). Na versão dinâmica, virá do CMS/BI."
+}

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Movimento Bahia pela Educação — Alfabetização na idade certa</title>
+<meta name="description" content="O Movimento Bahia pela Educação é uma iniciativa multissetorial articulada pela FIEB para ajudar a Bahia a alcançar 80% de crianças alfabetizadas na idade certa até 2030.">
+<meta name="robots" content="noindex, nofollow"><!-- protótipo: não indexar -->
+<script>/* ativa animações só com JS e sem preferência por redução de movimento; fallback se o script principal falhar */
+(function(d){if(!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("js-anim");setTimeout(function(){if(!window.__mbeReady)d.classList.remove("js-anim")},3000)}})(document.documentElement);</script>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="assets/brand/simbolo-favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ============ @partial: layouts/partials/header ============ -->
+<div class="a11y-bar" role="region" aria-label="Recursos de acessibilidade">
+  <div class="wrap a11y-bar__inner">
+    <span class="a11y-bar__label">Acessibilidade</span>
+    <div class="a11y-bar__group" role="group" aria-label="Tamanho do texto">
+      <button type="button" class="a11y-btn" data-font="-1" aria-label="Diminuir texto">A−</button>
+      <button type="button" class="a11y-btn" data-font="0" aria-label="Texto em tamanho padrão">A</button>
+      <button type="button" class="a11y-btn" data-font="1" aria-label="Aumentar texto">A+</button>
+    </div>
+    <button type="button" class="a11y-btn a11y-btn--wide" data-contrast aria-pressed="false">Alto contraste</button>
+    <a class="a11y-bar__link" href="/acessibilidade" data-pending>Acessibilidade</a>
+  </div>
+</div>
+
+<header class="site-header" id="topo">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="/" aria-label="Movimento Bahia pela Educação — página inicial">
+      <img src="assets/brand/logo-movimento.svg" alt="Movimento Bahia pela Educação" width="652" height="260">
+    </a>
+
+    <nav class="nav-desktop" aria-label="Menu principal">
+{{NAV_DESKTOP}}
+    </nav>
+
+    <div class="site-header__tools">
+      <button type="button" class="icon-btn" id="btn-busca" aria-expanded="false" aria-controls="painel-busca">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span class="icon-btn__label">Buscar</span>
+      </button>
+      <button type="button" class="icon-btn nav-toggle" id="btn-menu" aria-expanded="false" aria-controls="menu-mobile">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span class="icon-btn__label">Menu</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="search-panel" id="painel-busca" hidden>
+    <form class="wrap search-panel__form" role="search" id="form-busca" action="/busca">
+      <label for="campo-busca" class="search-panel__label">Buscar no portal</label>
+      <div class="search-panel__row">
+        <input id="campo-busca" name="q" type="search" placeholder="Busque por formações, documentos, notícias ou município" autocomplete="off">
+        <button type="submit" class="btn btn--primary">Buscar</button>
+      </div>
+      <p class="search-panel__hint">Sugestões: <button type="button" class="chip" data-sugestao="BNCC">BNCC</button><button type="button" class="chip" data-sugestao="PAR">PAR</button><button type="button" class="chip" data-sugestao="Encontros territoriais">Encontros territoriais</button><button type="button" class="chip" data-sugestao="Indicador Criança Alfabetizada">Indicador Criança Alfabetizada</button></p>
+    </form>
+  </div>
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+</header>
+
+<div class="menu-mobile" id="menu-mobile" hidden>
+  <div class="menu-mobile__head">
+    <span class="menu-mobile__title">Menu</span>
+    <button type="button" class="icon-btn" id="btn-menu-fechar" aria-label="Fechar menu">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Menu principal (celular)">
+{{NAV_MOBILE}}
+  </nav>
+</div>
+<div class="scrim" id="scrim" hidden></div>
+<!-- ============ /header ============ -->
+
+<main id="conteudo" tabindex="-1">
+
+<!-- @section: capa do caderno — meta, busca do município e mapa (v3) -->
+<section class="capa papel" id="capa" aria-labelledby="hero-titulo">
+  <div class="wrap capa__in">
+    <div class="capa__texto">
+      <p class="cab"><b>Caderno da Bahia</b><span class="hand escreve">Salvador, 5 de novembro de 2026</span></p>
+      <h1 id="hero-titulo"><span class="capa__n">417</span><span class="capa__h">municípios.<br>Uma meta.</span></h1>
+      <p class="capa__meta">Até {{meta.ano}}, <strong>{{meta.valor}}% das crianças</strong> baianas alfabetizadas na idade certa. Em {{ica_atual.ano}}, a Bahia chegou a <strong>{{ica_atual.valor}}%</strong>.</p>
+      <p class="capa__fonte">ICA {{ica_atual.ano}}, rede pública, divulgado pelo Movimento · Meta do Compromisso Nacional Criança Alfabetizada (MEC)</p>
+      <form class="pergunta" id="form-capa" novalidate data-note="Busca pelos 417 municípios (lista IBGE). Abre a folha do município na própria home, com endereço próprio (?municipio=nome)." data-note-type="confirmado">
+        <label for="capa-mun" class="hand escreve" style="--d:.9s">Qual é o seu município?</label>
+        <div class="capa__busca">
+          <input id="capa-mun" list="lista-municipios" autocomplete="off" placeholder="Digite o nome do município" aria-describedby="capa-aviso">
+          <button type="submit" class="btn btn--primary">Abrir a folha</button>
+        </div>
+        <p id="capa-aviso" class="capa__aviso" role="status"></p>
+        <p class="capa__exp">Experimente: <button type="button" data-folha="quixabeira">Quixabeira</button> · <button type="button" data-folha="lamarao">Lamarão</button> · <button type="button" data-folha="juazeiro">Juazeiro</button> · <button type="button" data-folha="licinio-de-almeida">Licínio de Almeida</button></p>
+      </form>
+      <p class="capa__links"><a class="link-arrow" href="#caminho">Conheça o Movimento</a><a class="link-arrow" href="/participe/inscricoes" data-pending>Quero participar</a></p>
+    </div>
+    <figure class="capa__mapa" data-note="Malha municipal do IBGE (CC0). Hachurados: municípios com alguma informação publicada (PAR, encontros, Prêmio, ICA do Lovable). Os demais têm folha, que mostra o que ainda falta." data-note-type="confirmado">
+      <p class="capa__dica hand" aria-hidden="true">toque no seu<br>município<svg viewBox="0 0 70 40"><path d="M6 4 C 20 30, 45 34, 64 30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M54 22 L65 30 L53 36" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></p>
+      {{CAPA_MAP}}
+      <figcaption><span class="leg leg--tem"><i></i>já tem informação no portal</span><span class="leg"><i></i>folha aguardando dados</span><span>Malha municipal: IBGE</span></figcaption>
+      <div class="capa__tip" id="capa-tip" hidden></div>
+    </figure>
+  </div>
+  <svg class="arc-divider draw-line" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M0 40 C 360 0, 1080 0, 1440 40" fill="none" stroke="url(#gArc)" stroke-width="3"/><defs><linearGradient id="gArc" x1="0" x2="1"><stop offset="0" stop-color="#ED2734"/><stop offset=".33" stop-color="#F2992D"/><stop offset=".66" stop-color="#6E44A5"/><stop offset="1" stop-color="#48B9D6"/></linearGradient></defs></svg>
+</section>
+
+<!-- @section: folha do município (v3) — aparece ao escolher um município -->
+<section class="folha-sec" id="folha" aria-label="Folha do município" hidden>
+  <div class="wrap">
+    <article class="folha papel" aria-labelledby="folha-nome" data-note="Cada folha mostra apenas dados publicados: PAR (Portal FIEB, lista parcial), encontros 2026 (Portal FIEB), Prêmio (Portal FIEB) e ICA municipal (Lovable, a validar). Sem dado, a folha diz isso. Na versão dinâmica, os dados virão do Observatório/BI." data-note-type="provisorio">
+      <div class="folha__furos" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div id="folha-conteudo"></div>
+    </article>
+  </div>
+</section>
+
+<!-- @section: caminhos por público (perfis do item 4.3 dos requisitos) -->
+<section class="paths" id="caminho" aria-labelledby="paths-titulo">
+  <div class="wrap paths__inner">
+    <div class="paths__head">
+      <h2 id="paths-titulo" class="paths__title">Por onde começar?</h2>
+      <p class="paths__sub">Escolha o seu perfil e veja os caminhos mais úteis para você no portal.</p>
+    </div>
+    <div class="paths__body">
+    <div class="paths__tabs" role="tablist" aria-label="Escolha seu perfil">
+      <button type="button" role="tab" id="tab-educ" aria-controls="painel-educ" aria-selected="true">Sou educador</button>
+      <button type="button" role="tab" id="tab-gest" aria-controls="painel-gest" aria-selected="false" tabindex="-1">Sou gestor público</button>
+      <button type="button" role="tab" id="tab-inst" aria-controls="painel-inst" aria-selected="false" tabindex="-1">Represento uma instituição</button>
+      <button type="button" role="tab" id="tab-impr" aria-controls="painel-impr" aria-selected="false" tabindex="-1">Sou da imprensa</button>
+      <button type="button" role="tab" id="tab-cid" aria-controls="painel-cid" aria-selected="false" tabindex="-1">Quero contribuir</button>
+    </div>
+    <div class="paths__panel" role="tabpanel" id="painel-educ" aria-labelledby="tab-educ" tabindex="0">
+      <p>Formações gratuitas, aulas do PAR e materiais de apoio para a sala de aula.</p>
+      <ul><li><a href="/nossas-acoes/formacoes" data-pending>Nossas formações</a></li><li><a href="/nossas-acoes/formacoes/par" data-pending>PAR: aulas e conteúdos</a></li><li><a href="/conhecimento-para-transformar/biblioteca" data-pending>Biblioteca</a></li><li><a href="/participe/inscricoes" data-pending>Inscrições</a></li></ul>
+    </div>
+    <div class="paths__panel" role="tabpanel" id="painel-gest" aria-labelledby="tab-gest" tabindex="0" hidden>
+      <p>Indicadores do seu município, boas práticas premiadas e a agenda de encontros territoriais.</p>
+      <ul><li><a href="#bi-observatorio" data-pending>Indicadores dos municípios</a></li><li><a href="/conhecimento-para-transformar/caderno-de-boas-praticas" data-pending>Caderno de boas práticas</a></li><li><a href="/nossas-acoes/formacoes/encontros-territoriais" data-pending>Encontros territoriais</a></li><li><a href="/agenda-e-noticias/agenda" data-pending>Agenda</a></li></ul>
+    </div>
+    <div class="paths__panel" role="tabpanel" id="painel-inst" aria-labelledby="tab-inst" tabindex="0" hidden>
+      <p>Quem integra o Movimento, os resultados alcançados e os canais para colaborar.</p>
+      <ul><li><a href="/o-que-e-o-movimento/quem-somos" data-pending>Quem somos</a></li><li><a href="/o-que-e-o-movimento/mapa-da-atuacao" data-pending>Nossos resultados</a></li><li><a href="/conhecimento-para-transformar/o-movimento-indica" data-pending>O Movimento indica</a></li><li><a href="/participe/fale-conosco" data-pending>Fale conosco</a></li></ul>
+    </div>
+    <div class="paths__panel" role="tabpanel" id="painel-impr" aria-labelledby="tab-impr" tabindex="0" hidden>
+      <p>Releases, fotos oficiais, logos e contatos da assessoria.</p>
+      <ul><li><a href="/agenda-e-noticias/movimento-na-midia" data-pending>Movimento na mídia / Imprensa</a></li><li><a href="/marcas" data-pending>Marcas</a></li><li><a href="/participe/fale-conosco" data-pending>Fale conosco</a></li></ul>
+    </div>
+    <div class="paths__panel" role="tabpanel" id="painel-cid" aria-labelledby="tab-cid" tabindex="0" hidden>
+      <p>Entenda o desafio da alfabetização na Bahia e veja como apoiar a causa.</p>
+      <ul><li><a href="/o-que-e-o-movimento/como-atuamos/o-desafio-da-bahia" data-pending>O desafio da Bahia</a></li><li><a href="/o-que-e-o-movimento/visao-e-proposito" data-pending>Visão e propósito</a></li><li><a href="/participe/fale-conosco" data-pending>Fale conosco</a></li></ul>
+    </div>
+    </div>
+    <nav class="sumario" aria-labelledby="sumario-titulo">
+      <h2 id="sumario-titulo" class="sumario__title">Sumário do caderno</h2>
+      <ol>
+        <li><a href="#licao-1"><span>O que é o Movimento</span></a></li>
+        <li><a href="#licao-2"><span>Como está a Bahia?</span></a></li>
+        <li><a href="#licao-3"><span>Como podemos ajudar?</span></a></li>
+        <li><a href="#licao-4"><span>Nossa atuação em números</span></a></li>
+        <li><a href="#licao-5"><span>Como podemos ajudar educadores?</span></a></li>
+        <li><a href="#licao-6"><span>Conhecimento para transformar</span></a></li>
+        <li><a href="#licao-7"><span>Acontece no Movimento</span></a></li>
+        <li><a href="#licao-8"><span>Participe</span></a></li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<!-- @section: o que é o Movimento -->
+<section class="about section" id="licao-1" data-licao="1" aria-labelledby="about-titulo">
+  <div class="wrap about__grid">
+    <div class="about__intro" data-anim="rise">
+      <p class="eyebrow eyebrow--purple"><span class="licao-n">Lição 1</span>O que é o Movimento</p>
+      <h2 id="about-titulo" class="h2">Uma iniciativa inédita na Bahia, criada em agosto de 2025</h2>
+      <p class="lead">Instituições públicas, entidades do setor produtivo e da sociedade civil trabalham juntas pela mesma meta. As ações são orientadas por dados, como o Indicador Criança Alfabetizada (ICA), do MEC, e pela Base Nacional Comum Curricular (BNCC).</p>
+      <ul class="link-list">
+        <li><a href="/o-que-e-o-movimento/quem-somos" data-pending>Quem somos</a></li>
+        <li><a href="/o-que-e-o-movimento/visao-e-proposito" data-pending>Visão e propósito</a></li>
+        <li><a href="/o-que-e-o-movimento/como-atuamos" data-pending>Como atuamos?</a></li>
+      </ul>
+
+    </div>
+      <figure class="about__photo" data-anim="rise" data-note="Foto oficial do Portal FIEB (out/2025): capacitação na sede da FIEB. Crédito: Valter Pontes/Coperphoto/Sistema FIEB. A matéria da FIEB informa lançamento oficial em outubro de 2025; os requisitos falam em criação em agosto de 2025." data-note-type="confirmado">
+        <img src="assets/img/fotos/capacitacao-2025-fieb.jpg" width="700" height="467" loading="lazy" alt="Profissionais da educação reunidos em mesas no auditório da FIEB, com a marca do Movimento nos telões.">
+        <figcaption class="photo-cap">Capacitação na sede da FIEB, 2025 · Foto: Valter Pontes/Coperphoto/Sistema FIEB</figcaption>
+      </figure>
+    <div class="about__statements" data-anim="stagger">
+      <article class="statement statement--purple">
+        <h3 class="statement__label">Nossa visão</h3>
+        <p>Transformar a Bahia em um estado com excelência educacional, alcançando melhores posições nos indicadores educacionais e garantindo que todas as crianças tenham acesso e sucesso escolar.</p>
+      </article>
+      <article class="statement statement--blue">
+        <h3 class="statement__label">Nosso propósito</h3>
+        <p>Alinhar esforços com os atores dos poderes públicos e da sociedade civil para criar condições que aperfeiçoem as políticas públicas de educação, garantindo uma educação inclusiva, equitativa e de qualidade.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- @section: o desafio da Bahia — ICA, meta, IDEB, consulta municipal -->
+<section class="challenge section" id="licao-2" data-licao="2" aria-labelledby="desafio-titulo">
+  <div class="wrap">
+    <div class="challenge__head" data-anim="rise">
+      <p class="eyebrow eyebrow--light"><span class="licao-n">Lição 2</span>O desafio da Bahia</p>
+      <h2 id="desafio-titulo" class="h2">Como está a Bahia?</h2>
+      <p class="lead">O Indicador Criança Alfabetizada (ICA) mede a porcentagem de crianças alfabetizadas ao final do 2º ano do ensino fundamental na rede pública.</p>
+    </div>
+
+    <figure class="ruler" data-anim="ruler" style="--now:{{ica_atual.valor}}%;--goal:{{meta.valor}}%" data-note="ICA 2025 = 56%: valor publicado pelo Movimento no Instagram (31/08/2026), adotado por decisão do responsável. Conflito registrado: o Portal FIEB (citando o MEC), a imprensa e o Lovable informam 55%. Validação com o BI pendente. Meta: documento oficial." data-note-type="provisorio">
+      <figcaption class="ruler__cap">
+        <span class="ruler__title">Crianças alfabetizadas na Bahia × meta 2030</span>
+        <span class="src-note">Dado divulgado pelo Movimento · validação com a equipe do BI pendente</span>
+      </figcaption>
+      <div class="ruler__track" role="img" aria-label="Bahia em {{ica_atual.ano}}: {{ica_atual.valor}}% de crianças alfabetizadas. Meta para {{meta.ano}}: {{meta.valor}}%. Faltam {{distancia_meta.valor}} pontos percentuais.">
+        <div class="ruler__ticks"></div>
+        <div class="ruler__fill"><span class="ruler__now-label"><b>{{ica_atual.valor}}%</b> em {{ica_atual.ano}}</span></div>
+        <div class="ruler__gap"><span>faltam <b>{{distancia_meta.valor}} p.p.</b></span></div>
+        <div class="ruler__goal"><span class="ruler__goal-pin"></span><span class="ruler__goal-label"><b>{{meta.valor}}%</b> meta {{meta.ano}}</span></div>
+      </div>
+      <div class="ruler__scale" aria-hidden="true"><span>0%</span><span>20%</span><span>40%</span><span>60%</span><span>80%</span><span>100%</span></div>
+      <dl class="ind-meta ind-meta--light">
+        <div><dt>Fonte</dt><dd>ICA/MEC, divulgado pelo Movimento (ago/2026). Meta: Compromisso Nacional Criança Alfabetizada</dd></div>
+        <div><dt>Ano de referência</dt><dd>{{ica_atual.ano}}</dd></div>
+        <div><dt>Atualizado em</dt><dd>{{atualizado_br}}</dd></div>
+        <div><dt>Metodologia</dt><dd><a href="/o-que-e-o-movimento/como-atuamos/o-desafio-da-bahia#metodologia" data-pending data-label="Como o ICA é medido (O desafio da Bahia › Metodologia)">Como o ICA é medido</a></dd></div>
+      </dl>
+    </figure>
+
+    <div class="challenge__grid">
+      <div class="trend" data-anim="bars" data-note="Série ICA: 2023 = 36,8% (MEC/Inep); 2024 = 36% (MEC, via Portal FIEB); 2025 = 56% (Movimento). Metas intermediárias de 43,4% (2024) e 50,2% (2025): MEC/Inep." data-note-type="provisorio">
+        <h3 class="h5">Evolução do ICA na Bahia</h3>
+        <ol class="trend__bars">
+{{ica_barras}}
+        </ol>
+        <p class="trend__legend"><span class="trend__key trend__key--goal"></span> meta intermediária do ano (MEC)</p>
+        <p class="ind-src">Fontes: MEC/Inep (2023 e metas), MEC via Portal FIEB (2024), Movimento (2025) · Atualizado em {{atualizado_br}}</p>
+      </div>
+
+      <div class="ideb" data-anim="rise" data-note="IDEB anos iniciais, rede pública (BA): 4,9 (2023) e 5,4 (2025), de notícia sobre o IDEB 2025. Confirmar com o Inep e a equipe do BI. A escala de 0 a 10 é diferente da do ICA, por isso o IDEB não entra na régua." data-note-type="ilustrativo">
+        <h3 class="h5">Outro indicador no Observatório</h3>
+        <p class="ideb__name">IDEB · anos iniciais · rede pública</p>
+        <p class="ideb__value"><b>{{ideb.atual}}</b><span>em {{ideb.atual_ano}}, numa escala de {{ideb.escala}}</span></p>
+        <p class="ideb__prev">{{ideb.anterior}} em {{ideb.anterior_ano}}</p>
+        <p class="ind-src">Fonte: Inep, via imprensa (a validar) · Atualizado em {{atualizado_br}}</p>
+        <a class="link-arrow link-arrow--light" href="/nossas-acoes/observatorio-da-educacao" data-pending>Ir ao Observatório da Educação</a>
+      </div>
+
+      <form class="finder" id="form-municipio" aria-labelledby="finder-titulo" data-note="Na v3 a consulta abre a folha do município, que mostra só dados publicados (sem valores de exemplo). Os 9 destaques usam o ICA do modelo Lovable, a validar." data-note-type="provisorio">
+        <h3 class="finder__title" id="finder-titulo">Abra a folha do seu município</h3>
+        <label for="municipio" class="finder__label">Município da Bahia</label>
+        <div class="finder__row">
+          <input id="municipio" name="municipio" list="lista-municipios" placeholder="Ex.: Feira de Santana" autocomplete="off">
+          <datalist id="lista-municipios">{{MUNICIPIOS}}</datalist>
+          <button type="submit" class="btn btn--sun">Abrir a folha</button>
+        </div>
+        <p class="finder__quick">Maiores resultados em {{destaques_municipais.ano}}:
+{{destaques_botoes}}
+        </p>
+        <a class="link-arrow" href="#bi-observatorio" data-pending>Indicadores municipais completos</a>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- @section: como atuamos — frentes -->
+<section class="work section" id="licao-3" data-licao="3" aria-labelledby="work-titulo">
+  <div class="wrap">
+    <div class="section-head" data-anim="rise">
+      <p class="eyebrow eyebrow--blue"><span class="licao-n">Lição 3</span>Como atuamos</p>
+      <h2 id="work-titulo" class="h2">Como podemos ajudar?</h2>
+      <p class="lead">Formando quem ensina e apoiando quem decide: duas frentes de formação gratuita, apoiadas por dados públicos e pelo reconhecimento aos municípios.</p>
+    </div>
+
+    <div class="fronts">
+      <article class="front front--par" data-anim="rise">
+        <figure class="front__art art-par" data-note="Ilustração criada para o protótipo (aula do PAR). Não há foto oficial de uma aula do PAR entre os materiais consultados. Substituir quando houver." data-note-type="provisorio">
+          <div class="art-par__screen" aria-hidden="true">
+            <span class="art-par__bar"><i></i><i></i><i></i></span>
+            <div class="art-par__slide">
+              <span class="art-par__kicker">PAR · Aula</span>
+              <span class="art-par__cards"><b>ma</b><b>me</b><b>mi</b><b>mo</b><b>mu</b></span>
+              <span class="art-par__play"></span>
+            </div>
+            <span class="art-par__progress"><i></i></span>
+          </div>
+          <ul class="art-par__files" aria-hidden="true"><li>Aula presencial</li><li>Aula assíncrona</li><li>Mentoria</li></ul>
+          <figcaption class="visually-hidden">Ilustração de uma aula do PAR.</figcaption>
+        </figure>
+        <div class="front__body" data-note="Dados do PAR: notícias oficiais do Portal FIEB (03/03, 25/03 e abr/2026)." data-note-type="confirmado">
+          <p class="front__kicker">Frente 1 · Professores</p>
+          <h3 class="h3">Programa de Alfabetização Responsável (PAR)</h3>
+          <p>Formação continuada e gratuita. As formadoras do Movimento vão até os municípios com os maiores desafios no ICA.</p>
+          <dl class="facts">
+            <div><dt>Carga horária</dt><dd>{{par.carga_horaria}} horas</dd></div>
+            <div><dt>Formato</dt><dd>Aulas presenciais, aulas assíncronas e mentoria</dd></div>
+            <div><dt>Público</dt><dd>Educação Infantil (G4 e G5), alfabetizadores do 1º e 2º anos e coordenadores pedagógicos</dd></div>
+          </dl>
+          <a class="link-arrow" href="/nossas-acoes/formacoes/par" data-pending>Conheça o PAR</a>
+        </div>
+      </article>
+
+      <article class="front front--territorios" data-anim="rise">
+        <figure class="front__art front__photo" data-note="Foto oficial do Portal FIEB: Encontro Territorial em Feira de Santana (abr/2026). Crédito: Sergio Pedreira/Coperphoto/Sistema FIEB." data-note-type="confirmado">
+          <img src="assets/img/fotos/encontro-territorial-feira-de-santana-2026.jpg" width="799" height="533" loading="lazy" alt="Gestores públicos em auditório durante o Encontro Territorial de Feira de Santana; no telão, a apresentação do Movimento.">
+          <figcaption class="photo-cap photo-cap--below">Encontro Territorial em Feira de Santana, abril de 2026 · Foto: Sergio Pedreira/Coperphoto/Sistema FIEB</figcaption>
+        </figure>
+        <div class="front__body" data-note="Agenda e balanço: Portal FIEB (03/03/2026 e 15/07/2026)." data-note-type="confirmado">
+          <p class="front__kicker">Frente 2 · Gestores públicos</p>
+          <h3 class="h3">Encontros territoriais</h3>
+          <p>Prefeitos, secretários, diretores e coordenadores discutem a alfabetização na idade certa, o financiamento da educação e as experiências premiadas. Em 2026:</p>
+          <ol class="dates">{{encontros_datas}}</ol>
+          <a class="link-arrow" href="/nossas-acoes/formacoes/encontros-territoriais" data-pending>Ver encontros territoriais</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="work__more" data-anim="stagger">
+      <a class="row-link" href="/nossas-acoes/observatorio-da-educacao" data-pending>
+        <span class="row-link__title">Observatório da Educação</span>
+        <span class="row-link__text">Indicadores do estado e de cada município para orientar decisões.</span>
+      </a>
+      <a class="row-link" href="/nossas-acoes/premio" data-pending data-note="1ª edição: Portal FIEB. 2ª edição em 27/11: Instagram oficial (27/10/2026)." data-note-type="confirmado">
+        <span class="row-link__title">Prêmio Município Alfabetizador</span>
+        <span class="row-link__text">Na 1ª edição, {{premio_ouro}} foram categoria Ouro, com 70% ou mais de crianças alfabetizadas. A 2ª edição (2025/2026) será entregue em 27 de novembro.</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- @section: nossa atuação em números (Mapa da atuação / Nossos resultados) -->
+<section class="results section" id="licao-4" data-licao="4" aria-labelledby="results-titulo">
+  <div class="wrap">
+    <div class="section-head section-head--row" data-anim="rise">
+      <div>
+        <p class="eyebrow eyebrow--orange"><span class="licao-n">Lição 4</span>Mapa da atuação</p>
+        <h2 id="results-titulo" class="h2">Nossa atuação em números</h2>
+        <p class="results__period">Ações de 2026, de março a outubro · Fonte: balanços publicados pelo Sistema FIEB</p>
+      </div>
+      <a class="link-arrow" href="/o-que-e-o-movimento/mapa-da-atuacao" data-pending>Mapa da atuação / Nossos resultados</a>
+    </div>
+
+    <div class="results__grid">
+      <figure class="reach" data-anim="map" data-note="Mapa real (malha IBGE). Mostra as 7 cidades-sede de 2026, os 10 municípios do PAR citados nas notícias da FIEB (lista parcial de 31) e os 3 vencedores Ouro da 1ª edição do Prêmio. A lista completa dos 254 municípios representados nos encontros não foi publicada." data-note-type="confirmado">
+        {{RESULTS_MAP}}
+        <figcaption class="reach__legend">
+          <span><i class="reach__pin"></i>Cidades-sede dos encontros 2026</span>
+          <span><i class="reach__sw reach__sw--par"></i>Municípios do PAR citados <em>(lista parcial)</em></span>
+          <span><i class="reach__sw reach__sw--ouro"></i>Prêmio, categoria Ouro (1ª edição)</span>
+        </figcaption>
+      </figure>
+
+      <div class="numbers">
+        <div class="kpi kpi--lead" data-note="Portal FIEB, 15/07/2026: 1.154 participantes representando 254 municípios nos Encontros Territoriais." data-note-type="confirmado">
+          <p class="kpi__label">Municípios representados nos encontros</p>
+          <p class="kpi__value"><span class="count" data-to="{{resultados.municipios_representados.valor}}">{{resultados.municipios_representados.valor}}</span><small> de {{resultados.municipios_representados.base}}</small></p>
+          <div class="kpi__share" aria-hidden="true"><i style="--w:{{reach_pct}}%"></i></div>
+          <p class="kpi__note">{{reach_pct_txt}} dos municípios baianos participaram dos Encontros Territoriais</p>
+          <p class="ind-src">Fonte: Portal FIEB, 15/07/2026 · ref. mar–jun/2026 · Atualizado em {{atualizado_br}}</p>
+        </div>
+
+        <div class="kpi-pair">
+          <div class="kpi" data-note="Portal FIEB (set/2026): 'cerca de 1.800 professores alfabetizadores' no PAR. Em jul/2026 eram mais de 1.600 profissionais em 31 municípios." data-note-type="confirmado">
+            <p class="kpi__label">Professores no PAR</p>
+            <p class="kpi__value"><small>cerca de </small><span class="count" data-to="{{resultados.professores.valor}}">{{fmt:resultados.professores.valor}}</span></p>
+            <p class="kpi__note">alfabetizadores em {{par.municipios.valor}} municípios</p>
+          <p class="ind-src">Fonte: Portal FIEB, set/2026 · ref. 2026 · Atualizado em {{atualizado_br}}</p>
+          </div>
+          <div class="kpi" data-note="Portal FIEB, 15/07/2026. O número conta participações, não pessoas únicas (regra de contagem pendente)." data-note-type="confirmado">
+            <p class="kpi__label">Participantes dos encontros</p>
+            <p class="kpi__value"><span class="count" data-to="{{resultados.gestores.valor}}">{{fmt:resultados.gestores.valor}}</span></p>
+            <p class="kpi__note">gestores e equipes técnicas nos 7 Encontros Territoriais</p>
+          <p class="ind-src">Fonte: Portal FIEB, 15/07/2026 · ref. mar–jun/2026 · Atualizado em {{atualizado_br}}</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="numbers numbers--row">
+        <div class="kpi kpi--split" data-note="7 Encontros Territoriais (mar a jun/2026) + 3 aulas da trilha Alfabetização Inclusiva (set e out/2026), segundo o Portal FIEB. O PAR é contínuo e não entra nesta contagem." data-note-type="confirmado">
+          <p class="kpi__label">Formações realizadas em 2026</p>
+          <p class="kpi__value"><span class="count" data-to="{{resultados.formacoes.valor}}">{{resultados.formacoes.valor}}</span><small> encontros formativos</small></p>
+          <div class="stack" aria-hidden="true">{{formacoes_stack}}</div>
+          <ul class="stack__legend">{{formacoes_legend}}</ul>
+          <p class="kpi__note">Além disso, o PAR é uma trilha contínua de {{par.carga_horaria}} horas.</p>
+          <p class="ind-src">Fonte: Portal FIEB · ref. 2026 · Atualizado em {{atualizado_br}}</p>
+        </div>
+
+        <div class="kpi kpi--sat" data-note="Satisfação: valor ilustrativo, pois não há dado publicado. Média 4,6 em escala de 1 a 5, com 812 respostas; a distribuição resulta em 4,61." data-note-type="ilustrativo">
+          <p class="kpi__label">Satisfação dos participantes <span class="data-flag data-flag--inline">{{rotulo_ilustrativo}}</span></p>
+          <p class="kpi__value"><span class="count" data-to="{{resultados.satisfacao.valor}}" data-dec="1">{{fmt:resultados.satisfacao.valor}}</span><small> de 5</small></p>
+          <p class="kpi__note">Escala de 1 (insatisfeito) a 5 (muito satisfeito) · {{fmt:resultados.satisfacao.respostas}} respostas</p>
+          <ol class="dist">{{satisfacao_dist}}</ol>
+          <p class="ind-src">Fonte: Valor ilustrativo, sem fonte · Atualizado em {{atualizado_br}}</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- @section: nossas formações — oportunidades e histórico -->
+<section class="training section" id="licao-5" data-licao="5" aria-labelledby="training-titulo">
+  <div class="wrap">
+    <div class="section-head section-head--row" data-anim="rise">
+      <div>
+        <p class="eyebrow eyebrow--purple"><span class="licao-n">Lição 5</span>Nossas formações</p>
+        <h2 id="training-titulo" class="h2">Como podemos ajudar educadores?</h2>
+        <p class="lead">Oportunidades abertas, formações realizadas e o que vem por aí.</p>
+      </div>
+      <a class="link-arrow" href="/nossas-acoes/formacoes" data-pending>Todas as formações</a>
+    </div>
+
+    <div class="tl" data-anim="stagger">
+      <article class="tl__item tl__item--open" data-note="Exemplo demonstrativo do layout de uma formação com inscrições abertas. Não corresponde a uma turma real." data-note-type="ilustrativo">
+        <p class="tl__status"><span class="status status--open">Inscrições abertas</span><span class="demo-tag">Exemplo demonstrativo</span></p>
+        <h3 class="tl__title">Nova turma de formação para professores alfabetizadores</h3>
+        <p class="tl__meta">Gratuita · on-line · vagas limitadas</p>
+        <a class="btn btn--primary btn--sm" href="/participe/inscricoes" data-pending>Inscrever-se</a>
+      </article>
+
+      <article class="tl__item tl__item--closed tl__item--photo" data-note="Datas, horário e professor: formulário de inscrição e Portal FIEB (set/2026). Foto: divulgação, publicada pelo Portal FIEB." data-note-type="confirmado">
+        <img class="tl__photo" src="assets/img/fotos/fernando-lauria.jpg" width="700" height="407" loading="lazy" alt="O neurocientista Fernando Lauria fala ao microfone em um palco.">
+        <div class="tl__content">
+          <p class="tl__status"><span class="status status--closed">Encerrada</span><span class="tl__when">8 set · 22 set · 13 out 2026</span></p>
+          <h3 class="tl__title">Curso de Alfabetização Inclusiva com Fernando Lauria</h3>
+          <p class="tl__meta">"O cérebro que aprende, a escola que inclui": três aulas virtuais ao vivo com o neurocientista, com certificado para quem participou das três.</p>
+          <a class="link-arrow" href="/nossas-acoes/formacoes/alfabetizacao-inclusiva" data-pending>Ver registro e materiais</a>
+          <p class="photo-cap">Foto: Divulgação</p>
+        </div>
+      </article>
+
+      <article class="tl__item tl__item--closed" data-note="Portal FIEB (agenda de 03/03/2026; balanço de 15/07/2026)." data-note-type="confirmado">
+        <p class="tl__status"><span class="status status--closed">Realizados</span><span class="tl__when">mar a jun 2026</span></p>
+        <h3 class="tl__title">Encontros territoriais em 7 cidades</h3>
+        <p class="tl__meta">{{fmt:encontros_2026.participantes}} participantes de {{encontros_2026.municipios_representados}} municípios em {{encontros_lista}}.</p>
+        <a class="link-arrow" href="/nossas-acoes/formacoes/encontros-territoriais" data-pending>Ver encontros</a>
+      </article>
+
+      <article class="tl__item tl__item--closed" data-note="Item do mapa do site. O Portal FIEB também registra um 'I Ciclo de Seminários – Formação de Lideranças' em nov/2025. Confirmar se é o mesmo evento e qual o ano correto." data-note-type="provisorio">
+        <p class="tl__status"><span class="status status--closed">Realizado</span><span class="tl__when">2024</span></p>
+        <h3 class="tl__title">Encontro de lideranças 2024</h3>
+        <p class="tl__meta">Registro do encontro com lideranças da educação.</p>
+        <a class="link-arrow" href="/nossas-acoes/formacoes/encontro-de-liderancas-2024" data-pending>Ver registro</a>
+      </article>
+
+      <article class="tl__item tl__item--future">
+        <p class="tl__status"><span class="status status--future">Evolução futura</span></p>
+        <h3 class="tl__title">Plataforma formativa</h3>
+        <p class="tl__meta">Trilhas com videoaulas, acompanhamento e certificados, previstas para uma etapa futura do portal.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- @section: conhecimento para transformar -->
+<section class="knowledge section" id="licao-6" data-licao="6" aria-labelledby="knowledge-titulo">
+  <div class="wrap">
+    <div class="knowledge__grid">
+      <div class="knowledge__intro" data-anim="rise">
+        <p class="eyebrow eyebrow--purple"><span class="licao-n">Lição 6</span>Conhecimento para transformar</p>
+        <h2 id="knowledge-titulo" class="h2">Materiais para planejar, ensinar e decidir</h2>
+        <p class="lead">Documentos oficiais, boas práticas dos municípios, artigos e indicações de quem trabalha com educação.</p>
+        <div class="shelf">
+          <p class="shelf__label" id="shelf-label">Na Biblioteca</p>
+          <ul class="shelf__list" aria-labelledby="shelf-label">
+            <li><a href="/conhecimento-para-transformar/biblioteca?tipo=bncc" data-pending data-label="Biblioteca (filtro: BNCC)">BNCC</a></li>
+            <li><a href="/conhecimento-para-transformar/biblioteca?tipo=pne" data-pending data-label="Biblioteca (filtro: PNE)">PNE</a></li>
+            <li><a href="/conhecimento-para-transformar/biblioteca?tipo=cnca" data-pending data-label="Biblioteca (filtro: CNCA)">CNCA</a></li>
+            <li><a href="/conhecimento-para-transformar/biblioteca?tipo=cartilhas" data-pending data-label="Biblioteca (filtro: cartilhas)">Cartilhas</a></li>
+            <li><a href="/conhecimento-para-transformar/biblioteca?tipo=estudos" data-pending data-label="Biblioteca (filtro: estudos e relatórios)">Estudos e relatórios</a></li>
+            <li><a href="/conhecimento-para-transformar/biblioteca?tipo=leis" data-pending data-label="Biblioteca (filtro: leis e guias)">Leis e guias</a></li>
+          </ul>
+          <a class="btn btn--primary" href="/conhecimento-para-transformar/biblioteca" data-pending>Baixar materiais</a>
+        </div>
+      </div>
+
+      <div class="knowledge__list" data-anim="stagger">
+        <a class="index-item" href="/conhecimento-para-transformar/caderno-de-boas-praticas" data-pending>
+          <span class="index-item__type">Publicação</span>
+          <span class="index-item__title">Caderno de boas práticas</span>
+          <span class="index-item__text">Práticas dos municípios da Categoria Ouro do Prêmio Município Alfabetizador.</span>
+        </a>
+        <a class="index-item" href="/conhecimento-para-transformar/educacao-em-pauta" data-pending>
+          <span class="index-item__type">Artigos</span>
+          <span class="index-item__title">Educação em pauta</span>
+          <span class="index-item__text">Artigos assinados por especialistas e colaboradores do Movimento.</span>
+        </a>
+        <a class="index-item" href="/conhecimento-para-transformar/o-movimento-indica" data-pending>
+          <span class="index-item__type">Curadoria</span>
+          <span class="index-item__title">O Movimento indica</span>
+          <span class="index-item__text">Livros, cursos, plataformas, podcasts e ferramentas recomendados pelos membros.</span>
+        </a>
+        <a class="doc" href="/conhecimento-para-transformar/doc-de-quixabeira" data-pending data-note="Composição editorial provisória (tipografia e localização real de Quixabeira na malha do IBGE), não é um quadro do documentário. O Portal FIEB confirma que o documentário está no YouTube do SESI Bahia; falta o link exato." data-note-type="provisorio">
+          <span class="doc__poster">
+            {{DOC_MAP}}
+            <span class="doc__title">Doc de<br>Quixabeira</span>
+            <span class="doc__place">Quixabeira · Bahia</span>
+            <span class="doc__play" aria-hidden="true"></span>
+          </span>
+          <span class="doc__body">
+            <span class="index-item__type">Documentário</span>
+            <span class="index-item__title">Doc de Quixabeira</span>
+            <span class="index-item__text">Como Quixabeira, Ouro na 1ª edição do Prêmio, virou referência em alfabetização. Disponível no canal do SESI Bahia no YouTube.</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- @section: agenda e notícias -->
+<section class="news section" id="licao-7" data-licao="7" aria-labelledby="news-titulo">
+  <div class="wrap">
+    <div class="section-head section-head--row" data-anim="rise">
+      <div>
+        <p class="eyebrow eyebrow--blue"><span class="licao-n">Lição 7</span>Agenda e notícias</p>
+        <h2 id="news-titulo" class="h2">Acontece no Movimento</h2>
+      </div>
+      <a class="link-arrow" href="/agenda-e-noticias/movimento-na-midia" data-pending>Movimento na mídia / Imprensa</a>
+    </div>
+
+    <div class="news__grid">
+      <div class="agenda" data-anim="stagger">
+        <h3 class="h4">Agenda</h3>
+        <ol class="agenda__list">
+          <li class="agenda__item agenda__item--next" data-note="Instagram oficial (27/10/2026): premiação em 27 de novembro. Local e horário a confirmar." data-note-type="confirmado">
+            <span class="agenda__date"><b>27</b><span>nov</span></span>
+            <span class="agenda__body"><span class="tag tag--orange">Prêmio · próximo</span><span class="agenda__title">Prêmio Município Alfabetizador, edição 2025/2026</span><span class="agenda__meta">Reconhecimento aos municípios que mais avançaram na alfabetização, com base no ICA</span></span>
+          </li>
+          <li class="agenda__item agenda__item--past" data-note="Formulário de inscrição e Portal FIEB." data-note-type="confirmado">
+            <span class="agenda__date"><b>13</b><span>out</span></span>
+            <span class="agenda__body"><span class="tag tag--purple">Formação · encerrada</span><span class="agenda__title">Da neurociência à sala de aula: estratégias inclusivas para alfabetizar todos os estudantes</span><span class="agenda__meta">Aula 3 do curso de Alfabetização Inclusiva · on-line</span></span>
+          </li>
+          <li class="agenda__item agenda__item--past" data-note="Portal FIEB (agenda 2026). Último encontro do ciclo." data-note-type="confirmado">
+            <span class="agenda__date"><b>09</b><span>jun</span></span>
+            <span class="agenda__body"><span class="tag tag--blue">Encontro territorial · realizado</span><span class="agenda__title">Encontro territorial em Salvador</span><span class="agenda__meta">Encerramento do ciclo de 2026, na sede da FIEB</span></span>
+          </li>
+        </ol>
+        <a class="link-arrow" href="/agenda-e-noticias/agenda" data-pending>Ver agenda completa</a>
+      </div>
+
+      <div class="newsfeed" data-anim="stagger">
+        <h3 class="h4">Notícias</h3>
+        <a class="news-lead" href="https://www.fieb.org.br/noticias/movimento-bahia-pela-educacao-apresenta-resultados-do-primeiro-semestre-de-2026-e-anuncia-novas-acoes/" target="_blank" rel="noopener" data-note="Matéria real do Portal FIEB (jul/2026), com link externo. Título parafraseado. Foto do Portal FIEB; crédito individual não informado na matéria." data-note-type="confirmado">
+          <span class="news-lead__img"><img src="assets/img/fotos/reuniao-balanco-2026-07.jpg" width="1100" height="619" loading="lazy" alt="Representantes das instituições integrantes do Movimento reunidos na sede do Sistema FIEB."></span>
+          <span class="news-lead__src">Portal FIEB · julho de 2026 <span class="ext" aria-hidden="true">↗</span></span>
+          <span class="news-lead__title">Movimento apresenta os resultados do 1º semestre de 2026 e anuncia novas ações</span>
+          <span class="photo-cap">Foto: Sistema FIEB</span>
+        </a>
+
+        <a class="link-arrow" href="/agenda-e-noticias/movimento-na-midia" data-pending>Todas as notícias</a>
+      </div>
+    </div>
+
+    <ul class="news-list news-list--row" data-anim="stagger" data-note="Quatro publicações reais do Instagram oficial, com link para o post. Miniaturas em 640 px, com crédito @bahiapelaeducacao." data-note-type="confirmado">
+          <li><a href="https://www.instagram.com/bahiapelaeducacao/p/DeedyHjxoMx/" target="_blank" rel="noopener"><img src="assets/img/instagram/2026-10-14_reuniao-tce-ba.jpg" width="480" height="640" loading="lazy" alt="Integrantes do Movimento e do TCE-BA reunidas em uma sala de reuniões."><span class="news-list__body"><span class="news-list__src">14 out · Instagram</span><span class="news-list__title">Movimento se reúne com o TCE-BA para discutir o Marco Legal da Primeira Infância</span><span class="photo-cap">Foto: @bahiapelaeducacao</span></span></a></li>
+          <li><a href="https://www.instagram.com/bahiapelaeducacao/reel/DehsgN3TBvL/" target="_blank" rel="noopener"><img src="assets/img/instagram/2026-10-15_dia-do-professor-sesi.jpg" width="360" height="640" loading="lazy" alt="Clessia Lobo, superintendente de Educação e Cultura do SESI Bahia, em depoimento em vídeo."><span class="news-list__body"><span class="news-list__src">15 out · Dia do Professor</span><span class="news-list__title">Clessia Lobo, do SESI Bahia, conta sua trajetória e homenageia os educadores</span><span class="photo-cap">Foto: @bahiapelaeducacao</span></span></a></li>
+          <li><a href="https://www.instagram.com/bahiapelaeducacao/reel/De0IEeHzq-g/" target="_blank" rel="noopener"><img src="assets/img/instagram/2026-10-22_bullying-mp-ba.jpg" width="360" height="640" loading="lazy" alt="A promotora Gabriela Sampaio, do MP-BA, em depoimento em vídeo."><span class="news-list__body"><span class="news-list__src">22 out · Vídeo</span><span class="news-list__title">Promotora Gabriela Sampaio, do MP-BA, fala sobre prevenção ao bullying e ao cyberbullying</span><span class="photo-cap">Foto: @bahiapelaeducacao</span></span></a></li>
+          <li><a href="https://www.instagram.com/bahiapelaeducacao/p/DfFR1tmlAxn/" target="_blank" rel="noopener"><img src="assets/img/instagram/2026-10-29_movimento-indica-dia-do-livro.jpg" width="512" height="640" loading="lazy" alt="Arte do Movimento indica com retratos de cinco autores nordestinos."><span class="news-list__body"><span class="news-list__src">29 out · O Movimento indica</span><span class="news-list__title">Dia Nacional do Livro: cinco obras infantojuvenis que valorizam a cultura nordestina</span><span class="photo-cap">Arte: @bahiapelaeducacao</span></span></a></li>
+        </ul>
+
+    <div class="insta" data-anim="rise" data-note="Seleção manual de posts reais, com link. A integração automática com o Instagram (RF10) continua pendente." data-note-type="provisorio">
+      <div class="insta__head">
+        <span class="insta__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></span>
+        <div>
+          <p class="insta__eyebrow">No Instagram</p>
+          <a class="insta__handle" href="https://www.instagram.com/bahiapelaeducacao/" target="_blank" rel="noopener">@bahiapelaeducacao</a>
+          <p class="insta__note">Seleção manual de publicações</p>
+        </div>
+      </div>
+      <ul class="insta__grid">
+        <li><a class="insta__tile" href="https://www.instagram.com/bahiapelaeducacao/p/DfS3BHiFJ_R/" target="_blank" rel="noopener"><img src="assets/img/instagram/2026-11-03_premio-criterios.jpg" loading="lazy" alt="Post: critérios do Prêmio Município Alfabetizador 2025/2026"></a></li>
+        <li><a class="insta__tile" href="https://www.instagram.com/bahiapelaeducacao/p/DfFR1tmlAxn/" target="_blank" rel="noopener"><img src="assets/img/instagram/2026-10-29_movimento-indica-dia-do-livro.jpg" loading="lazy" alt="Post: O Movimento indica, no Dia Nacional do Livro"></a></li>
+        <li><a class="insta__tile" href="https://www.instagram.com/bahiapelaeducacao/p/DfAJToWzUKi/" target="_blank" rel="noopener"><img src="assets/img/instagram/2026-10-27_premio-vem-ai.jpg" loading="lazy" alt="Post: vem aí o Prêmio Município Alfabetizador, em 27 de novembro"></a></li>
+        <li><a class="insta__tile" href="https://www.instagram.com/bahiapelaeducacao/reel/DeuVswwzOdm/" target="_blank" rel="noopener"><img src="assets/img/instagram/2026-10-20_bullying-fernando-lauria.jpg" loading="lazy" alt="Vídeo: bullying e cyberbullying, por Fernando Lauria"></a></li>
+        <li><a class="insta__tile" href="https://www.instagram.com/bahiapelaeducacao/reel/DehsgN3TBvL/" target="_blank" rel="noopener"><img src="assets/img/instagram/2026-10-15_dia-do-professor-sesi.jpg" loading="lazy" alt="Vídeo: homenagem do Dia do Professor"></a></li>
+        <li><a class="insta__tile" href="https://www.instagram.com/bahiapelaeducacao/p/DecWsh-FG8p/" target="_blank" rel="noopener"><img src="assets/img/instagram/2026-10-13_curso-alfabetizacao-inclusiva.jpg" loading="lazy" alt="Post: última aula do curso de Alfabetização Inclusiva"></a></li>
+      </ul>
+      <a class="link-arrow" href="https://www.instagram.com/bahiapelaeducacao/" target="_blank" rel="noopener">Seguir o Movimento</a>
+    </div>
+  </div>
+</section>
+
+<!-- @section: participe -->
+<section class="join section" id="licao-8" data-licao="8" aria-labelledby="join-titulo">
+  <div class="wrap">
+    <img class="join__signature" data-anim="rise" src="assets/brand/assinatura-bahia-aprende-branca.svg" alt="A Bahia aprende com a Bahia" width="1047" height="172">
+    <p class="licao-n licao-n--light">Lição 8</p>
+    <h2 id="join-titulo" class="h2 join__title">Participe do Movimento</h2>
+    <div class="join__grid" data-anim="stagger">
+      <a class="join__card" href="/participe/inscricoes" data-pending>
+        <span class="join__kicker">Para educadores e gestores</span>
+        <span class="join__name">Inscrições</span>
+        <span class="join__text">Inscreva-se em formações e cursos gratuitos.</span>
+        <span class="join__list"><span>Programa de Alfabetização Responsável (PAR)</span><span>Encontros territoriais</span><span>Cursos e trilhas on-line</span></span>
+        <span class="join__go" aria-hidden="true">→</span>
+      </a>
+      <div class="join__card join__card--contact">
+        <span class="join__kicker">Para instituições, imprensa e cidadãos</span>
+        <span class="join__name">Fale conosco</span>
+        <ul class="contact-list">
+          <li><span>E-mail</span><a href="mailto:bahiapelaeducacao@fieb.org.br" data-note="E-mail retirado do formulário de inscrição. Confirmar se é o canal oficial do Fale conosco." data-note-type="provisorio">bahiapelaeducacao@fieb.org.br</a></li>
+          <li><span>Instagram</span><a href="https://www.instagram.com/bahiapelaeducacao/" target="_blank" rel="noopener">@bahiapelaeducacao</a></li>
+          <li data-note="Telefone não fornecido." data-note-type="provisorio"><span>Telefone</span><em>a confirmar</em></li>
+        </ul>
+        <a class="link-arrow" href="/participe/fale-conosco" data-pending>Enviar mensagem</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- @section: instituições integrantes -->
+<section class="members section" aria-labelledby="members-titulo">
+  <div class="wrap">
+    <div class="section-head section-head--row" data-anim="rise">
+      <div>
+        <p class="eyebrow">Quem somos</p>
+        <h2 id="members-titulo" class="h2">Instituições integrantes</h2>
+      </div>
+      <a class="link-arrow" href="/o-que-e-o-movimento/quem-somos" data-pending>Conheça os membros</a>
+    </div>
+    <div class="logos" data-note="Logos copiados dos sites oficiais de cada instituição apenas para esta prévia. O uso definitivo depende dos arquivos oficiais e da autorização de cada instituição (RN07) e da decisão sobre onde ficam as marcas (PA17)." data-note-type="provisorio" data-anim="rise">
+      <div class="logos__viewport" id="logos-viewport" tabindex="0" role="region" aria-label="Logos das instituições integrantes (rolagem horizontal)">
+      <ul class="logos__track" id="logos-track">
+        <li class="logos__item"><img src="assets/img/logos/governo-bahia.png" width="98" height="56" alt="Governo do Estado da Bahia" decoding="async"></li>
+        <li class="logos__item logos__item--text" data-note="Logo ainda não obtido. Exibido o nome até o recebimento do arquivo oficial." data-note-type="provisorio"><b>SEC</b><span>Secretaria da Educação do Estado da Bahia</span></li>
+        <li class="logos__item"><img src="assets/img/logos/mp-ba.png" width="205" height="56" alt="Ministério Público do Estado da Bahia (MP-BA)" decoding="async"></li>
+        <li class="logos__item"><img src="assets/img/logos/tce-ba.png" width="339" height="56" alt="Tribunal de Contas do Estado da Bahia (TCE-BA)" decoding="async"></li>
+        <li class="logos__item"><img src="assets/img/logos/tcm-ba.png" width="118" height="56" alt="Tribunal de Contas dos Municípios do Estado da Bahia (TCM-BA)" decoding="async"></li>
+        <li class="logos__item"><img src="assets/img/logos/upb.png" width="329" height="56" alt="União dos Municípios da Bahia (UPB)" decoding="async"></li>
+        <li class="logos__item"><img src="assets/img/logos/fieb.png" width="156" height="56" alt="Federação das Indústrias do Estado da Bahia (FIEB)" decoding="async"></li>
+        <li class="logos__item"><img src="assets/img/logos/fetrabase.png" width="150" height="56" alt="Federação das Empresas de Transportes dos Estados da Bahia e Sergipe (FETRABASE)" decoding="async"></li>
+        <li class="logos__item"><img src="assets/img/logos/sebrae.svg" width="105" height="56" alt="SEBRAE Bahia" decoding="async"></li>
+        <li class="logos__item"><img src="assets/img/logos/sesi.svg" width="160" height="56" alt="Serviço Social da Indústria (SESI)" decoding="async"></li>
+        <li class="logos__item"><img src="assets/img/logos/undime.png" width="65" height="56" alt="União Nacional dos Dirigentes Municipais de Educação (UNDIME)" decoding="async"></li>
+        <li class="logos__item logos__item--text" data-note="Logo ainda não obtido. Exibido o nome até o recebimento do arquivo oficial." data-note-type="provisorio"><b>Cátedra Sérgio Henrique Ferreira</b><span>USP Ribeirão Preto</span></li>
+      </ul>
+      </div>
+      <div class="logos__controls">
+        <button type="button" class="logos__btn" data-logos="prev" aria-controls="logos-viewport"><span aria-hidden="true">←</span><span class="visually-hidden">Logos anteriores</span></button>
+        <button type="button" class="logos__btn logos__btn--play" data-logos="toggle" aria-controls="logos-viewport" aria-pressed="false"><span class="logos__pause-ico" aria-hidden="true"></span><span class="logos__label">Pausar</span></button>
+        <button type="button" class="logos__btn" data-logos="next" aria-controls="logos-viewport"><span aria-hidden="true">→</span><span class="visually-hidden">Próximos logos</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ============ @partial: layouts/partials/footer ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <img src="assets/brand/logo-movimento-negativa.svg" alt="Movimento Bahia pela Educação" width="652" height="260">
+        <p>Iniciativa multissetorial articulada pela Federação das Indústrias do Estado da Bahia (FIEB).</p>
+        <p class="site-footer__contact"><a href="mailto:bahiapelaeducacao@fieb.org.br">bahiapelaeducacao@fieb.org.br</a></p>
+      </div>
+      <nav class="site-footer__map" aria-label="Mapa do site">
+{{FOOTER_MAP}}
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <ul class="site-footer__legal">
+{{FOOTER_LEGAL}}
+      </ul>
+      <p><button type="button" class="footer-cookie" data-cookie="abrir">Preferências de cookies</button> · © Movimento Bahia pela Educação</p>
+    </div>
+  </div>
+</footer>
+
+<a class="to-top" href="#topo" aria-label="Voltar ao topo"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+
+<!-- @partial: cookies (RF43) — escolha guardada só neste navegador nesta prévia -->
+<div class="cookie" id="cookie" role="region" aria-labelledby="cookie-titulo" hidden>
+  <h2 id="cookie-titulo" class="cookie__title">Sua privacidade</h2>
+  <p class="cookie__text">Usamos cookies necessários para o portal funcionar e, com sua permissão, cookies de métricas e de conteúdos externos (YouTube e Instagram). <a href="/lgpd-e-privacidade" data-pending>Política de privacidade</a></p>
+  <div class="cookie__prefs" id="cookie-prefs" hidden>
+    <label class="cookie__opt"><input type="checkbox" checked disabled> <span><b>Necessários</b> sempre ativos</span></label>
+    <label class="cookie__opt"><input type="checkbox" id="ck-metricas"> <span><b>Métricas</b> Google Analytics, para melhorar o portal</span></label>
+    <label class="cookie__opt"><input type="checkbox" id="ck-midia"> <span><b>Conteúdos externos</b> vídeos e publicações incorporados</span></label>
+  </div>
+  <div class="cookie__actions">
+    <button type="button" class="btn btn--primary btn--sm" data-cookie="aceitar">Aceitar todos</button>
+    <button type="button" class="btn btn--ghost btn--sm" data-cookie="recusar">Recusar opcionais</button>
+    <button type="button" class="cookie__link" data-cookie="configurar" aria-expanded="false" aria-controls="cookie-prefs">Configurar</button>
+    <button type="button" class="btn btn--primary btn--sm" data-cookie="salvar" hidden>Salvar escolhas</button>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<!-- Ferramenta de revisão do protótipo (não faz parte do portal) -->
+<button type="button" class="review-toggle" id="review-toggle" aria-pressed="false">Notas de revisão</button>
+<aside class="review-panel" id="review-panel" hidden aria-label="Notas de revisão do protótipo">
+  <h2>Notas de revisão</h2>
+  <p>O que é confirmado, provisório ou ilustrativo nesta prévia. Clique em uma nota para localizá-la na página. As notas não fazem parte do portal.</p>
+  <div id="review-groups"></div>
+</aside>
+
+<script>window.ROTAS = {{ROTAS_JSON}};
+window.MBE_DADOS = {{DADOS_JSON}};
+window.MBE_FOLHAS = {{FOLHAS_JSON}};</script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

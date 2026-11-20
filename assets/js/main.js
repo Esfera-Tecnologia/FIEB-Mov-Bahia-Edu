@@ -416,6 +416,22 @@
 
   }
 
+  /* ---------- Versão da home: ?home=v2 (ou #home-v2) mostra o destaque do Painel na capa ----------
+     A escolha fica guardada durante a visita (sessionStorage); ?home=v1 ou #home-v1 volta à home padrão.
+     O hash existe porque a prévia hospedada no Claude não repassa parâmetros de URL. */
+  const capaPainel = $("#capa-painel");
+  const aplicarHome = () => {
+    const q = new URLSearchParams(location.search).get("home"), h = (location.hash.match(/^#home-(v[12])$/) || [])[1];
+    const pedido = h || q;
+    try { if (pedido === "v2" || pedido === "v1") sessionStorage.setItem("mbe-home", pedido); } catch {}
+    let v = pedido; if (!v) { try { v = sessionStorage.getItem("mbe-home"); } catch {} }
+    document.body.classList.toggle("home-v2", v === "v2");
+    if (capaPainel) capaPainel.hidden = v !== "v2";
+    if (h) { try { history.replaceState(null, "", location.pathname + location.search); } catch {} }
+  };
+  aplicarHome();
+  window.addEventListener("hashchange", () => { if (/^#home-v[12]$/.test(location.hash)) aplicarHome(); });
+
   /* ---------- Janela de conteúdo incorporado (RF47 Painel · RF20 álbuns do Flickr) ----------
      Uma única janela modal. Cada gatilho informa o que carregar: [data-painel] abre o Power BI;
      [data-album="id"] abre o álbum do Flickr (embed oficial do Flickr). Ambos são "conteúdo incorporado

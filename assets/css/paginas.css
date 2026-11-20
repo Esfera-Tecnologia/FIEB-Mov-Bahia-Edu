@@ -381,3 +381,42 @@ body:not([data-pagina="index"]) .members { background: var(--paper); }
 .pg-texto--largo .contato__form-wrap { max-width: none; }
 @media (max-width: 600px) { .painel-modal__origem span:not(.visually-hidden) { display: none; } }
 @media (min-width: 960px) { .pg-duas:has(> .pg-texto--largo) { grid-template-columns: minmax(0, 1fr) 17rem; column-gap: 2rem; } }
+
+/* ---------- Home v2: destaque do Painel em faixa de largura total, no fim da capa ----------
+   Folha colada no caderno (fita nas cores da marca) com uma miniatura do painel montada com dados reais
+   (ICA 2025 por município, planilha CNCA_2025). O cartão inteiro é clicável. */
+.capa__painel { position: relative; display: grid; gap: 1.5rem 2.5rem; margin: 3rem 0 1.5rem; padding: 1.75rem clamp(1.25rem, 1rem + 1.5vw, 2.25rem); background: #fff; box-shadow: 0 20px 38px -22px rgba(22,23,29,.55), 0 2px 0 rgba(22,23,29,.06); transform: rotate(-.35deg); transition: transform .25s, box-shadow .25s; cursor: pointer; }
+.capa__painel[hidden] { display: none; }
+.capa__painel:hover, .capa__painel:focus-within { transform: rotate(0) translateY(-3px); box-shadow: 0 26px 44px -22px rgba(22,23,29,.6), 0 2px 0 rgba(22,23,29,.06); }
+@media (min-width: 900px) { .capa__painel { grid-template-columns: minmax(16rem, .8fr) minmax(0, 1.6fr); align-items: center; } }
+.capa__painel-fita { position: absolute; top: -12px; left: 50%; width: 150px; height: 24px; transform: translateX(-50%) rotate(-2deg); background: var(--grad-brand); opacity: .85; box-shadow: 0 1px 2px rgba(0,0,0,.12); }
+.capa__painel-anot { position: absolute; right: 1.25rem; top: -2.7rem; margin: 0; color: var(--red-600); font-size: 1.45rem; line-height: 1; display: flex; align-items: flex-end; gap: .1rem; transform: rotate(-3deg); }
+.capa__painel-anot svg { width: 42px; height: 26px; transform: scaleX(-1) translateY(14px); }
+.capa__painel-eyebrow { margin: 0 0 .35rem; font-family: var(--font-head); font-weight: 700; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--purple-600); }
+.capa__painel-t { font-family: var(--font-head); font-weight: 800; font-size: clamp(1.3rem, 1.1rem + .8vw, 1.75rem); line-height: 1.15; margin: 0 0 .5rem; }
+.capa__painel-txt > p:not(.capa__painel-eyebrow) { margin: 0 0 1.1rem; font-size: 1rem; color: #3A3E49; line-height: 1.5; }
+.capa__painel-btn { display: inline-flex; align-items: center; gap: .6rem; white-space: normal; text-align: left; line-height: 1.25; min-height: 54px; padding-inline: 1.25rem; box-shadow: 0 4px 0 var(--blue-900); }
+.capa__painel-btn svg { flex: none; transition: transform .2s; }
+.capa__painel:hover .capa__painel-btn svg { transform: translateX(4px); }
+.capa__painel-btn::after { content: ""; position: absolute; inset: 0; }
+/* miniatura do painel */
+.bi { border: 1px solid #D9DCE3; border-radius: 8px; background: #FBFCFE; padding: .8rem .9rem .7rem; color: #4A4F5C; }
+.bi__cab { display: flex; justify-content: space-between; align-items: center; gap: .5rem; margin: 0 0 .7rem; padding-bottom: .5rem; border-bottom: 1px solid #E4E7EE; font-family: var(--font-head); font-weight: 700; font-size: .75rem; letter-spacing: .03em; color: var(--mbe-ink); }
+.bi__cab b { flex: none; padding: .12rem .45rem; border-radius: 3px; background: #F2C811; color: #16171D; font-size: .62rem; letter-spacing: .06em; text-transform: uppercase; }
+.bi__corpo { display: grid; gap: .6rem; }
+@media (min-width: 600px) { .bi__corpo { grid-template-columns: minmax(9rem, .7fr) minmax(0, 2fr); } }
+.bi__kpis { display: grid; gap: .5rem; }
+@media (max-width: 599px) { .bi__kpis { grid-template-columns: repeat(3, 1fr); } }
+.bi__kpis p { margin: 0; padding: .5rem .6rem; background: #fff; border: 1px solid #E4E7EE; border-radius: 6px; line-height: 1.2; font-size: .78rem; }
+.bi__kpis b { display: block; font-family: var(--font-head); font-size: 1.45rem; color: var(--mbe-blue); }
+.bi__kpis p:last-child b { color: var(--orange-700); }
+.bi__graf { margin: 0; background: #fff; border: 1px solid #E4E7EE; border-radius: 6px; padding: .55rem .7rem .45rem; display: flex; flex-direction: column; }
+.bi__graf-t { margin: 0 0 .4rem; font-weight: 600; font-size: .8rem; color: var(--mbe-ink); }
+.bi__barras { list-style: none; margin: 0; padding: 0; flex: 1; min-height: 140px; display: grid; grid-template-columns: repeat(6, 1fr); gap: .6rem; align-items: end; }
+.bi__barras li { height: 100%; display: grid; grid-template-rows: auto 1fr auto; justify-items: center; align-items: end; }
+.bi__barras b { font-family: var(--font-head); font-size: .85rem; color: var(--mbe-ink); padding-bottom: .15rem; }
+.bi__barras i { width: 100%; height: var(--h); min-height: 3px; background: var(--c); border-radius: 3px 3px 0 0; transform-origin: bottom; transition: transform .35s; outline: 1px solid rgba(22,23,29,.08); }
+.bi__rot { font-size: .7rem; color: var(--muted); padding-top: .25rem; text-align: center; line-height: 1.15; }
+.capa__painel:hover .bi__barras i { transform: scaleY(1.05); }
+.bi__fonte { margin: .55rem 0 0; font-size: .7rem; color: var(--muted); line-height: 1.35; }
+@media (prefers-reduced-motion: reduce) { .capa__painel, .capa__painel:hover { transform: none; transition: none; } .bi__barras i, .capa__painel-btn svg { transition: none; transform: none !important; } }

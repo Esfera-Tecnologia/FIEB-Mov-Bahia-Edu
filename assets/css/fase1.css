@@ -1,0 +1,251 @@
+/* =========================================================
+   Movimento Bahia pela Educação — Fase 1 (Documento de Requisitos v1.0)
+   Conceito do caderno: papel pautado, margem vermelha, anotações à mão
+   e seções organizadas como lições. Complementa tokens.css e main.css.
+   ========================================================= */
+
+/* Cabeçalho: local e data do acesso (RF04.6) e Fale conosco */
+.a11y-bar__inner { justify-content: flex-start; }
+.a11y-bar__local { margin: 0 auto 0 0; font-size: 1.2rem; line-height: 1; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 60vw; }
+.header-contato { white-space: nowrap; }
+@media (max-width: 1279px) { .header-contato { display: none; } }
+
+/* Resultados da busca (RF05) */
+.busca-res { list-style: none; margin: .5rem 0 0; padding: 0; max-height: min(60vh, 520px); overflow: auto; }
+.busca-res li + li { border-top: 1px solid var(--rule); }
+.busca-res a { display: grid; gap: .15rem; padding: .8rem .25rem; text-decoration: none; color: var(--mbe-ink); }
+.busca-res a:hover b, .busca-res a:focus-visible b { color: var(--mbe-blue); text-decoration: underline; }
+.busca-res b { font-family: var(--font-head); font-size: 1rem; }
+.busca-res__secao { font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 600; }
+.busca-res__trecho { font-size: .92rem; color: #3A3E49; }
+.busca-res mark { background: #FFE39A; color: inherit; padding: 0 .1em; border-radius: 2px; }
+.busca-res__vazio { padding: .8rem .25rem; }
+
+/* Cabeçalho das lições */
+
+/* ---------------- Abertura (RF01) ---------------- */
+
+/* Carrossel de fotos: fotos presas na página do caderno */
+.album { position: relative; }
+.album__folha { position: relative; background: #fff; padding: 12px 12px 0; box-shadow: 0 1px 0 #d9d5ca, 0 22px 40px -26px rgba(22,23,29,.5); transform: rotate(1deg); }
+.album__fita { position: absolute; width: 96px; height: 26px; background: rgba(248,192,0,.55); top: -12px; z-index: 2; }
+.album__fita--a { left: 18px; transform: rotate(-6deg); }
+.album__fita--b { right: 18px; transform: rotate(5deg); background: rgba(72,185,214,.45); }
+.album__slides { position: relative; }
+.album__slide { margin: 0; }
+.album__slide img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+html.js-anim .album__slide.is-ativo img { animation: sub-in .45s ease both; }
+.album__slide figcaption { display: grid; gap: .1rem; padding: .55rem .2rem .7rem; }
+.album__slide figcaption .hand { font-size: 1.35rem; line-height: 1.1; color: var(--mbe-blue); }
+.album__slide figcaption small { font-size: .78rem; color: var(--muted); }
+.album__controles { display: flex; align-items: center; gap: .5rem; margin-top: 1.1rem; flex-wrap: wrap; }
+.album__btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-width: 44px; min-height: 44px; padding: 0 .85rem; border: 1px solid var(--rule); background: #fff; border-radius: var(--radius); font-family: var(--font-head); font-weight: 700; font-size: .88rem; color: var(--mbe-ink); cursor: pointer; }
+.album__btn:hover { border-color: var(--mbe-blue); color: var(--mbe-blue); }
+.album__btn--play { margin-left: auto; }
+.album__btn.is-paused .logos__pause-ico { border: 0; width: 0; height: 0; border-left: 10px solid currentColor; border-block: 6px solid transparent; }
+.album__pontos { display: flex; gap: .15rem; list-style: none; margin: 0; padding: 0; }
+.album__pontos button { width: 44px; height: 44px; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
+.album__pontos button::before { content: ""; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--mbe-ink); }
+.album__pontos button[aria-current="true"]::before { background: var(--mbe-ink); }
+
+/* ---------------- Lição 1 — Como está a Bahia? ---------------- */
+
+.combo { position: relative; }
+.combo input { width: 100%; font: inherit; font-size: 1.1rem; padding: .85rem 1rem; min-height: 54px; border: 2px solid var(--mbe-ink); border-radius: var(--radius); background: #fff; }
+.combo__lista { position: absolute; z-index: 20; left: 0; right: 0; top: calc(100% + 4px); list-style: none; margin: 0; padding: .3rem 0; background: #fff; border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: 0 14px 28px -16px rgba(22,23,29,.4); max-height: 320px; overflow: auto; }
+.combo__lista li { padding: .65rem 1rem; cursor: pointer; min-height: 44px; display: flex; align-items: center; gap: .5rem; }
+.combo__lista li[aria-selected="true"], .combo__lista li:hover { background: #EAF1FB; color: var(--mbe-blue); }
+.combo__lista small { color: var(--muted); font-size: .78rem; }
+.combo__nada { color: var(--muted); cursor: default !important; }
+
+/* mapa por nível — quanto mais escuro, mais preenchido o caderno */
+.mapa-nivel { position: relative; margin: 0; }
+.mapa-nivel__svg { display: block; width: 100%; height: auto; max-height: 560px; }
+#mapa-muns path { stroke: #fff; stroke-width: .5; cursor: pointer; }
+#mapa-muns path:hover { stroke: var(--mbe-ink); stroke-width: 1.2; }
+#mapa-muns path.sel { stroke: var(--mbe-orange); stroke-width: 2.4; }
+.mapa-nivel__contorno { fill: none; stroke: var(--mbe-ink); stroke-width: 1.4; pointer-events: none; }
+.nv0 { --c: #F3E7C9; } .nv1 { --c: #CFE0EF; } .nv2 { --c: #9EC2E3; } .nv3 { --c: #6A9DD0; } .nv4 { --c: #3B6DB7; } .nv5 { --c: #1B3A7F; } .nd { --c: #fff; }
+#mapa-muns path { fill: var(--c); }
+#mapa-muns path.nd { fill: url(#nd-hach); fill: #EEE; }
+.mapa-nivel__titulo { font-family: var(--font-head); font-weight: 700; font-size: .85rem; margin: .6rem 0 .4rem; }
+.mapa-nivel__leg { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: .15rem 1rem; font-size: .82rem; }
+.mapa-nivel__leg li { display: grid; grid-template-columns: 18px 1fr auto; gap: .5rem; align-items: center; padding: .15rem 0; border-bottom: 1px dashed #dde2ea; }
+.mapa-nivel__leg i { width: 16px; height: 12px; background: var(--c); border: 1px solid rgba(22,23,29,.2); }
+.mapa-nivel__leg i.nd { background: #EEE; }
+.mapa-nivel__leg small { color: var(--muted); }
+.mapa-nivel__leg b { font-family: var(--font-head); font-size: .85rem; }
+.mapa-nivel__tip { position: absolute; pointer-events: none; background: var(--mbe-ink); color: #fff; font-family: var(--font-head); font-weight: 700; font-size: .8rem; padding: .3rem .55rem; border-radius: 4px; transform: translate(-50%, -130%); white-space: nowrap; z-index: 5; }
+
+/* card do município (RF51) — página do caderno */
+  padding: 1.5rem clamp(1rem, 2.5vw, 2rem) 1.75rem calc(clamp(1rem, 2.5vw, 2rem) + 28px); border: 1px solid #e6e1d4; box-shadow: 0 18px 36px -26px rgba(22,23,29,.45); }
+.grafico { display: block; width: 100%; height: auto; overflow: visible; }
+.grafico .gr { stroke: #DCE2EA; stroke-width: 1; }
+.grafico .eixo { font-size: 12px; fill: var(--muted); font-family: var(--font-body); }
+.grafico .obs { fill: none; stroke: var(--mbe-blue); stroke-width: 3.5; stroke-linejoin: round; stroke-linecap: round; }
+.grafico .obs-p { fill: var(--mbe-blue); stroke: #fff; stroke-width: 2; }
+.grafico .meta { fill: none; stroke: var(--mbe-orange); stroke-width: 2.5; stroke-dasharray: 7 6; }
+.grafico .meta-p { fill: #fff; stroke: var(--orange-700); stroke-width: 2; }
+.grafico .rot { font-family: var(--font-head); font-weight: 700; font-size: 13px; }
+.grafico .rot--obs { fill: var(--mbe-blue); }
+.grafico .rot--meta { fill: var(--orange-700); font-size: 12px; }
+.grafico .var { font-family: "Caveat", cursive; font-weight: 600; font-size: 21px; fill: var(--red-600); }
+.card-mun__leg { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; font-size: .82rem; color: var(--muted); margin: .25rem 0 .75rem; }
+.card-mun__leg span { display: inline-flex; align-items: center; gap: .45rem; }
+.lg-obs::before { content: ""; width: 22px; height: 4px; border-radius: 2px; background: var(--mbe-blue); }
+.lg-meta::before { content: ""; width: 22px; border-top: 3px dashed var(--mbe-orange); }
+.card-mun__resumo { display: flex; align-items: baseline; gap: .75rem; margin: 0 0 1rem; padding: .6rem 0; border-block: 1px solid var(--rule); font-size: 1.02rem; }
+.card-mun__resumo b { font-family: var(--font-head); font-weight: 800; padding-right: .75rem; border-right: 2px solid var(--mbe-ink); }
+.selo { display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: center; padding: .9rem 1rem; background: #fff; border: 1px solid var(--rule); border-left: 8px solid var(--c); margin-bottom: 1rem; }
+.selo__nivel { margin: 0; font-family: var(--font-head); font-weight: 800; font-size: 1.15rem; line-height: 1.1; max-width: 7em; }
+.selo__faixa { margin: 0; font-weight: 600; }
+.selo__frase { margin: .15rem 0 0; font-size: .95rem; color: #3A3E49; }
+.card-mun__tabela { margin-bottom: .75rem; }
+.card-mun__tabela summary { cursor: pointer; font-family: var(--font-head); font-weight: 700; font-size: .9rem; color: var(--mbe-blue); padding: .5rem 0; min-height: 44px; display: flex; align-items: center; }
+.card-mun__tabela table { width: 100%; border-collapse: collapse; font-size: .92rem; background: #fff; }
+.card-mun__tabela caption { text-align: left; font-size: .8rem; color: var(--muted); padding: .3rem 0; }
+.card-mun__tabela th, .card-mun__tabela td { padding: .4rem .6rem; border-bottom: 1px solid var(--rule); text-align: left; }
+
+/* ---------------- Lição 2 — Como o Movimento atua? ---------------- */
+.atua { background: var(--paper-2); }
+.mapa-par { width: 100%; height: auto; display: block; }
+.mapa-par g path { fill: #fff; stroke: #C9CFDA; stroke-width: .4; }
+.mapa-par g path.par { fill: var(--mbe-orange); stroke: #fff; stroke-width: .6; }
+.mapa-par__contorno { fill: none; stroke: var(--mbe-ink); stroke-width: 1.2; }
+
+/* ---------------- Lição 3 — Como apoiamos os educadores? ---------------- */
+.trilhas__lista { list-style: none; counter-reset: t; margin: .4rem 0; padding: 0; display: grid; }
+.trilhas__lista li { counter-increment: t; display: grid; grid-template-columns: 2.2rem 1fr; column-gap: .5rem; padding: .8rem 0; border-bottom: 1px solid var(--line); }
+.trilhas__lista li::before { content: counter(t) "."; grid-row: span 2; font-family: "Caveat", cursive; font-weight: 600; font-size: 1.9rem; line-height: 1; color: var(--red-600); }
+.trilhas__lista b { font-family: var(--font-head); font-size: 1.02rem; }
+.trilhas__lista span { color: #3A3E49; font-size: .95rem; }
+
+/* ---------------- Lição 4 — Fale conosco ---------------- */
+
+/* Quem faz parte */
+.members { padding-block: clamp(2.5rem, 2rem + 2vw, 3.5rem); }
+.logos__item { flex-direction: column; }
+.logos__item:has(.logos__papel) { padding-top: 2rem; }
+.logos__papel { position: absolute; top: .6rem; left: 50%; transform: translateX(-50%); font-style: normal; font-family: var(--font-head); font-weight: 700; font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--orange-700); white-space: nowrap; }
+
+/* Rodapé */
+.site-footer__assinatura { width: 220px !important; height: auto; display: block; margin: 0 0 1rem; }
+
+/* Janela do Painel (RF47) */
+.painel-modal { width: min(1280px, 96vw); height: min(860px, 92vh); max-width: none; max-height: none; padding: 0; border: 0; border-radius: 8px; overflow: hidden; display: none; }
+.painel-modal[open] { display: grid; grid-template-rows: auto 1fr; }
+.painel-modal::backdrop { background: rgba(22,23,29,.7); }
+.painel-modal__cab { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .5rem .5rem .5rem 1.25rem; border-bottom: 1px solid var(--rule); background: #fff; }
+.painel-modal__cab h2 { margin: 0; font-family: var(--font-head); font-weight: 800; font-size: 1.05rem; }
+.painel-modal__corpo { position: relative; background: var(--paper-2); }
+.painel-modal__frame { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #fff; }
+.painel-modal__estado { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: .6rem; text-align: center; padding: 2rem; max-width: 46ch; margin: auto; }
+.painel-modal__estado p { margin: 0; }
+.spinner { width: 42px; height: 42px; border-radius: 50%; border: 4px solid var(--line); border-top-color: var(--mbe-blue); animation: gira 1s linear infinite; }
+@keyframes gira { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .spinner { animation-duration: 3s; } }
+@media (max-width: 760px) { .painel-modal { width: 100vw; height: 100dvh; border-radius: 0; } }
+
+/* Celular */
+@media (max-width: 640px) {
+  .album__btn--play { margin-left: 0; }
+}
+@media (max-width: 520px) { .selo { grid-template-columns: 1fr; gap: .4rem; } .selo__nivel { max-width: none; } }
+
+/* =========================================================
+   Fase 1 sobre o modelo v3 ("O caderno de cada município")
+   ========================================================= */
+/* Capa: consulta do município (RF51) e mapa por nível */
+.pergunta__cta { margin: 0 0 .2rem; font-family: var(--font-head); font-weight: 700; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+#municipio { scroll-margin-top: calc(var(--header-h) + 24px); }
+.capa__busca { align-items: stretch; }
+.capa__busca .combo { flex: 1; min-width: 0; }
+.capa__busca .combo input { min-height: 52px; }
+.capa__busca .btn { min-height: 52px; white-space: nowrap; }
+.capa__aviso { color: var(--muted); font-weight: 400; font-size: .9rem; }
+.capa__mapa .mapa-nivel__svg { max-height: 64vh; }
+.capa__mapa figcaption { display: block; }
+.mapa-nivel__titulo span { font-weight: 400; color: var(--muted); }
+.capa__mapa .mapa-nivel__leg { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); font-size: .78rem; }
+.capa__exp button { min-height: 44px; }
+@media (min-width: 960px) { .capa__in { align-items: start; } }
+
+/* Folha do município */
+.folha__nome small { display: block; font-size: .42em; font-weight: 700; letter-spacing: 0; color: var(--muted); margin-bottom: .15rem; }
+.folha .card-mun__grafico { margin-top: .25rem; }
+.folha .selo { margin-top: .2rem; }
+.folha .lado .licao { margin-top: 1.25rem; }
+.folha__links { display: flex !important; flex-wrap: wrap; gap: 0 1.25rem; margin-top: .6rem !important; }
+.folha__pe .btn { min-height: 44px; }
+
+/* Lição 1: carrossel no lugar da foto do "O que é" */
+@media (min-width: 900px) { .about__album { grid-area: photo; } }
+.about__album { margin: 0; }
+.about__album .album__folha { transform: rotate(.8deg); }
+.statement .link-arrow { margin-top: .6rem; }
+
+/* Lição 2: ranking, chamada da folha e Painel */
+.btn--light { background: #fff; color: var(--blue-900); border: 2px solid #fff; }
+.btn--light:hover { background: transparent; color: #fff; }
+@media (min-width: 1100px) { .challenge__grid--f1 { grid-template-columns: .8fr 1.1fr 1.1fr; } }
+.challenge__grid--f1 .finder { grid-column: auto; display: grid; gap: .8rem; align-content: start; }
+.finder__txt { margin: 0; color: #3A3E49; }
+.finder--f1 .btn { justify-self: start; white-space: normal; text-align: left; }
+.rank .ideb__value b { font-size: clamp(3rem, 2.4rem + 2vw, 4.2rem); }
+.painel-chamada { padding: 1.5rem; border: 1px solid rgba(255,255,255,.16); border-radius: var(--radius); display: grid; gap: .8rem; align-content: start; }
+.painel-chamada p { margin: 0; color: rgba(255,255,255,.88); }
+.painel-chamada .btn { justify-self: start; white-space: normal; text-align: left; }
+
+/* Lição 3: mapa do PAR no lugar da ilustração */
+.front__mapa-par { aspect-ratio: auto !important; background: var(--paper); padding: 1.25rem 1.5rem .75rem; display: grid; grid-template-columns: minmax(0, 1fr); justify-items: center; }
+.front__mapa-par .mapa-par { max-height: 300px; width: auto; max-width: 100%; }
+.front__mapa-par .mapa-par__leg { display: flex; align-items: center; gap: .45rem; font-size: .8rem; color: var(--muted); margin: .5rem 0 0; }
+.front__mapa-par .mapa-par__leg i { width: 14px; height: 10px; background: var(--mbe-orange); }
+
+/* Lição 4: trilhas do PAR na linha do tempo */
+@media (min-width: 1100px) { .tl--f1 .tl__item:nth-child(1) { grid-column: span 3; grid-row: span 2; } .tl--f1 .tl__item:nth-child(2), .tl--f1 .tl__item:nth-child(3) { grid-column: span 3; } }
+.tl__item--trilhas::before { background: var(--mbe-purple); }
+.trilhas__lista { list-style: none; counter-reset: t; margin: .2rem 0 .4rem; padding: 0; display: grid; width: 100%; }
+.trilhas__lista li { counter-increment: t; display: grid; grid-template-columns: 2.2rem 1fr; column-gap: .5rem; padding: .7rem 0; border-bottom: 1px solid var(--line); }
+.trilhas__lista li::before { content: counter(t) "."; grid-row: span 2; font-family: "Caveat", cursive; font-weight: 600; font-size: 1.9rem; line-height: 1; color: var(--red-600); }
+.trilhas__lista b { font-family: var(--font-head); font-size: 1rem; }
+.trilhas__lista span { color: #3A3E49; font-size: .93rem; }
+
+/* Lição 5: Fale conosco */
+.join__grid--f1 { grid-template-columns: minmax(0, 1fr) !important; max-width: 720px; }
+.join__card--contact .btn { justify-self: start; align-self: flex-start; margin-top: .5rem; }
+.contact-list__v { overflow-wrap: anywhere; }
+
+/* =========================================================
+   Política de Privacidade (RF44) — página do caderno
+   ========================================================= */
+.pol-capa { padding-block: calc(var(--pauta) * 1.2) calc(var(--pauta) * 1.6); }
+.pol-capa__in { padding-left: max(clamp(1.15rem, .6rem + 2.5vw, 2.5rem), calc(var(--margem) + 1rem)); }
+@media (min-width: 1341px) { .pol-capa__in { padding-left: clamp(1.15rem, .6rem + 2.5vw, 2.5rem); } }
+.breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; margin: 0 0 1.25rem; padding: 0; font-size: .88rem; color: var(--muted); }
+.breadcrumb li + li::before { content: "›"; margin-right: .3rem; }
+.breadcrumb a { color: var(--mbe-blue); }
+.pol-capa__titulo { font-family: var(--font-head); font-weight: 800; font-size: clamp(1.8rem, 1.2rem + 2.2vw, 3rem); line-height: 1.1; letter-spacing: -.015em; margin: 0 0 .75rem; max-width: 22em; }
+.pol-capa__meta { margin: 0 0 1rem; font-size: .9rem; color: var(--muted); }
+.pol-capa__lead { font-size: var(--fs-1); max-width: 60ch; margin: 0 0 .75rem; }
+.pol-capa__dpo { margin: 0; padding: .6rem .9rem; background: #FFF6D8; display: inline-block; transform: rotate(-.4deg); }
+.pol { background: #fff; border-top: 1px solid var(--rule); }
+.pol__in { display: grid; gap: 2rem 4rem; }
+@media (min-width: 1000px) { .pol__in { grid-template-columns: 17rem minmax(0, 1fr); align-items: start; } .pol__sumario { position: sticky; top: calc(var(--header-h) + 1.5rem); max-height: calc(100vh - var(--header-h) - 3rem); overflow: auto; } }
+.pol__sumario-titulo { font-family: var(--font-head); font-weight: 800; font-size: 1rem; margin: 0 0 .5rem; }
+.pol__sumario ol { list-style: none; margin: 0; padding: 0; }
+.pol__sumario a { display: flex; gap: .5rem; align-items: baseline; padding: .35rem 0; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--mbe-ink); font-size: .92rem; }
+.pol__sumario a:hover { color: var(--mbe-blue); text-decoration: underline; }
+.pol__sumario .hand { color: var(--red-600); font-size: 1.2rem; min-width: 1.6rem; line-height: 1; }
+.pol__texto { max-width: 72ch; font-size: 1.02rem; line-height: 1.65; }
+.pol__texto p { margin: 0 0 1rem; }
+.pol__h2 { font-family: var(--font-head); font-weight: 800; font-size: clamp(1.15rem, 1rem + .6vw, 1.45rem); line-height: 1.25; margin: 2.5rem 0 1rem; padding-top: .5rem; border-top: 2px solid var(--line); scroll-margin-top: calc(var(--header-h) + 1rem); }
+.pol__h2:first-child { margin-top: 0; }
+.pol__h2 .hand { color: var(--red-600); font-size: 1.5em; font-weight: 600; margin-right: .2rem; }
+.pol__h3 { font-family: var(--font-head); font-weight: 700; font-size: 1.05rem; margin: 1.75rem 0 .6rem; }
+.pol__lista { margin: 0 0 1.1rem; padding-left: 1.4rem; }
+.pol__lista li { margin-bottom: .45rem; }
+.pol__lista ul { margin-top: .4rem; padding-left: 1.2rem; list-style: circle; }
+.pol__citacao { margin: 0 0 1.1rem; padding: .8rem 1.1rem; border-left: 4px solid var(--mbe-purple); background: var(--paper); font-style: italic; }
+.pol__citacao p { margin: 0; }
+.pol__fim { margin-top: 2rem; }

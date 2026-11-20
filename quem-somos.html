@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quem somos — Movimento Bahia pela Educação</title>
+<meta name="description" content="O Movimento Bahia pela Educação é uma iniciativa intersetorial e apartidária, articulada pela FIEB, que reúne 14 organizações públicas e privadas pela alfabetização na idade certa.">
+<meta name="robots" content="noindex, nofollow"><!-- protótipo: não indexar -->
+<script>/* ativa animações só com JS e sem preferência por redução de movimento; fallback se o script principal falhar */
+(function(d){if(!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("js-anim");setTimeout(function(){if(!window.__mbeReady)d.classList.remove("js-anim")},3000)}})(document.documentElement);</script>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/fase1.css">
+<link rel="stylesheet" href="assets/css/paginas.css">
+<link rel="icon" href="assets/brand/simbolo-favicon.svg" type="image/svg+xml">
+</head>
+<body data-pagina="quem-somos">
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ============ @partial: layouts/partials/header ============ -->
+<header class="site-header" id="topo">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html" aria-label="Movimento Bahia pela Educação — página inicial">
+      <img src="assets/brand/logo-movimento.svg" alt="Movimento Bahia pela Educação" width="652" height="260">
+    </a>
+
+    <nav class="nav-desktop" aria-label="Menu principal">
+<ul class="nav-l1">
+  <li><a class="nav-l1__link" href="index.html">Home</a></li>
+  <li><button type="button" class="nav-l1__btn is-section" aria-expanded="false" aria-controls="mega-1">Sobre o Movimento<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mega" id="mega-1" hidden><div class="wrap mega__inner">
+      <div class="mega__intro"><h2>Sobre o Movimento</h2><p>Quem integra o Movimento, sua visão, a trajetória desde 2025, como atua e o desafio da Bahia.</p></div>
+      <ul class="mega__cols">
+        <li class="nav-l2"><a href="quem-somos.html" aria-current="page">Quem somos</a></li>
+        <li class="nav-l2"><a href="visao-e-proposito.html">Visão e propósito</a></li>
+        <li class="nav-l2"><a href="historico.html">Histórico</a></li>
+        <li class="nav-l2"><a href="como-atuamos.html">Como atuamos?</a></li>
+        <li class="nav-l2"><a href="o-desafio-da-bahia.html">O desafio da Bahia</a></li>
+      </ul></div></div></li>
+  <li><button type="button" class="nav-l1__btn" aria-expanded="false" aria-controls="mega-2">Nossas ações<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mega" id="mega-2" hidden><div class="wrap mega__inner">
+      <div class="mega__intro"><h2>Nossas ações</h2><p>Formações já realizadas, o Painel da Educação dos Municípios e o Prêmio Município Alfabetizador.</p></div>
+      <ul class="mega__cols">
+        <li class="nav-l2"><a href="nossas-formacoes.html">Nossas formações</a><ul class="nav-l3"><li><a href="par.html">PAR — Programa Alfabetização Responsável</a></li><li><a href="encontros-territoriais.html">Encontros territoriais</a></li><li><a href="liderancas-transformacionais.html">Lideranças Transformacionais para a Escola</a></li><li><a href="alfabetizacao-inclusiva.html">Alfabetização Inclusiva</a></li></ul></li>
+        <li class="nav-l2"><a href="painel-da-educacao.html">Painel da Educação dos Municípios</a></li>
+        <li class="nav-l2"><a href="premio.html">Prêmio Município Alfabetizador</a></li>
+      </ul></div></div></li>
+  <li><button type="button" class="nav-l1__btn" aria-expanded="false" aria-controls="mega-3">Participe<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mega" id="mega-3" hidden><div class="wrap mega__inner">
+      <div class="mega__intro"><h2>Participe</h2><p>Fale com a coordenação do Movimento.</p></div>
+      <ul class="mega__cols">
+        <li class="nav-l2"><a href="fale-conosco.html">Fale conosco</a></li>
+      </ul></div></div></li>
+</ul>
+    </nav>
+
+    <div class="site-header__tools">
+      <a class="btn btn--primary btn--sm header-contato" href="fale-conosco.html"><svg class="header-contato__ico" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="header-contato__txt">Fale conosco</span></a>
+      <button type="button" class="icon-btn" id="btn-busca" aria-expanded="false" aria-controls="painel-busca">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span class="icon-btn__label">Buscar</span>
+      </button>
+      <button type="button" class="icon-btn nav-toggle" id="btn-menu" aria-expanded="false" aria-controls="menu-mobile">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span class="icon-btn__label">Menu</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="search-panel" id="painel-busca" hidden>
+    <form class="wrap search-panel__form" role="search" id="form-busca" data-note="RF05: busca por palavra-chave no texto das páginas da Fase 1, com índice gerado automaticamente a cada publicação, feita no navegador, sem servidor. Ignora acentos e maiúsculas, a partir de 2 caracteres. Os resultados levam às páginas do protótipo." data-note-type="confirmado">
+      <label for="campo-busca" class="search-panel__label">Buscar no portal</label>
+      <div class="search-panel__row">
+        <input id="campo-busca" name="q" type="search" placeholder="Busque por formação, página ou município premiado" autocomplete="off" aria-describedby="busca-status">
+        <button type="submit" class="btn btn--primary">Buscar</button>
+      </div>
+      <p id="busca-status" class="search-panel__hint" role="status"></p>
+      <ol class="busca-res" id="busca-resultados"></ol>
+    </form>
+  </div>
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+</header>
+
+<div class="menu-mobile" id="menu-mobile" hidden>
+  <div class="menu-mobile__head">
+    <span class="menu-mobile__title">Menu</span>
+    <button type="button" class="icon-btn" id="btn-menu-fechar" aria-label="Fechar menu">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Menu principal (celular)">
+<ul class="m-l1">
+  <li><a class="m-l1__link" href="index.html">Home</a></li>
+  <li><button type="button" class="m-l1__btn" aria-expanded="false" aria-controls="msub-1">Sobre o Movimento<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="m-sub" id="msub-1" hidden><ul>
+      <li class="nav-l2"><a href="quem-somos.html" aria-current="page">Quem somos</a></li>
+      <li class="nav-l2"><a href="visao-e-proposito.html">Visão e propósito</a></li>
+      <li class="nav-l2"><a href="historico.html">Histórico</a></li>
+      <li class="nav-l2"><a href="como-atuamos.html">Como atuamos?</a></li>
+      <li class="nav-l2"><a href="o-desafio-da-bahia.html">O desafio da Bahia</a></li>
+    </ul></div></li>
+  <li><button type="button" class="m-l1__btn" aria-expanded="false" aria-controls="msub-2">Nossas ações<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="m-sub" id="msub-2" hidden><ul>
+      <li class="nav-l2"><a href="nossas-formacoes.html">Nossas formações</a><ul class="nav-l3"><li><a href="par.html">PAR — Programa Alfabetização Responsável</a></li><li><a href="encontros-territoriais.html">Encontros territoriais</a></li><li><a href="liderancas-transformacionais.html">Lideranças Transformacionais para a Escola</a></li><li><a href="alfabetizacao-inclusiva.html">Alfabetização Inclusiva</a></li></ul></li>
+      <li class="nav-l2"><a href="painel-da-educacao.html">Painel da Educação dos Municípios</a></li>
+      <li class="nav-l2"><a href="premio.html">Prêmio Município Alfabetizador</a></li>
+    </ul></div></li>
+  <li><button type="button" class="m-l1__btn" aria-expanded="false" aria-controls="msub-3">Participe<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="m-sub" id="msub-3" hidden><ul>
+      <li class="nav-l2"><a href="fale-conosco.html">Fale conosco</a></li>
+    </ul></div></li>
+</ul>
+  </nav>
+</div>
+<div class="scrim" id="scrim" hidden></div>
+<!-- ============ /header ============ -->
+
+<main id="conteudo" tabindex="-1">
+<!-- @page: Quem somos (RF13) — modelo padrão: capa + texto com margem + bloco "grade de logos" -->
+<section class="pg-capa papel" aria-labelledby="pg-titulo" data-bloco="capa">
+  <div class="wrap pg-capa__in">
+    <nav class="breadcrumb" aria-label="Você está em"><ol><li><a href="index.html">Início</a></li><li>Sobre o Movimento</li><li aria-current="page">Quem somos</li></ol></nav>
+    <p class="cab"><b>Sobre o Movimento</b><span class="hand">quem somos</span></p>
+    <h1 id="pg-titulo" class="pg-titulo">Quem somos</h1>
+    <p class="pg-lead">O <strong>Movimento Bahia pela Educação</strong> é uma iniciativa intersetorial e apartidária, articulada pela Federação das Indústrias do Estado da Bahia (FIEB), que reúne organizações públicas e privadas comprometidas com a melhoria dos indicadores educacionais do estado.</p>
+  </div>
+</section>
+
+<section class="pg-sec" aria-label="O que é" data-bloco="texto-margem">
+  <div class="wrap pg-duas">
+    <div class="pg-texto">
+      <h2 class="pg-h2">O que é</h2>
+      <p>O objetivo central do Movimento é contribuir para que a Bahia atinja 80% de crianças alfabetizadas na idade certa até 2030, conforme diretriz do Compromisso Nacional Criança Alfabetizada, do Ministério da Educação (MEC). O estado tem índice de 56%, conforme o dado mais recente do Indicador Criança Alfabetizada 2025.</p>
+      <p>A Bahia ocupa a 24ª posição no ranking nacional de alfabetização na idade certa, cenário que demanda mobilização conjunta. Para isso, são desenvolvidas as seguintes ações gratuitas:</p>
+      <ul class="pg-acoes">
+        <li><a href="nossas-formacoes.html">Formação continuada de professores</a></li>
+        <li><a href="encontros-territoriais.html">Encontros territoriais para gestores e profissionais da educação;</a></li>
+        <li><a href="premio.html">Entrega do Prêmio Município Alfabetizador para cidades com maiores índices de alfabetização na idade certa;</a></li>
+        <li><a href="painel-da-educacao.html">Uso de dados estruturados para orientar ações e decisões, além de monitorar resultados.</a></li>
+      </ul>
+    </div>
+    <aside class="pg-margem" aria-label="Nesta página">
+      <p class="pg-margem__t hand">continue lendo</p>
+      <ul class="pg-margem__links"><li><a class="link-arrow" href="visao-e-proposito.html">Visão e propósito</a></li><li><a class="link-arrow" href="historico.html">Histórico</a></li><li><a class="link-arrow" href="como-atuamos.html">Como atuamos?</a></li><li><a class="link-arrow" href="o-desafio-da-bahia.html">O desafio da Bahia</a></li></ul>
+    </aside>
+  </div>
+</section>
+
+<section class="pg-bloco pg-bloco--papel2" id="integrantes-grade" aria-labelledby="integrantes-grade-t" data-bloco="grade-logos">
+  <div class="wrap">
+    <header class="pg-bloco__cab">
+      <h2 id="integrantes-grade-t" class="pg-h2">Instituições integrantes</h2>
+      <p class="pg-intro">Catorze organizações públicas e privadas, na ordem dos textos do Movimento. A FIEB articula o coletivo.</p>
+    </header>
+    <ul class="integ-grade" data-note="RF13 / RN07: logo acima do nome completo, sem link externo, na ordem dos Textos Etapa 1. Logos autorizados pelo cliente (20/11/2026); Secretaria da Educação, Cátedra Sérgio Henrique Ferreira, Fundação Telefônica Vivo e Instituto Natura aparecem com o nome até o envio dos arquivos (CA42.3)." data-note-type="provisorio">
+<li class="integ"><div class="integ__logo"><img src="assets/img/logos/fieb.png" alt="Federação das Indústrias do Estado da Bahia (FIEB)" loading="lazy"></div><p class="integ__papel">Articuladora</p><p class="integ__nome">Federação das Indústrias do Estado da Bahia (FIEB)</p></li>
+<li class="integ"><div class="integ__logo"><img src="assets/img/logos/governo-bahia.png" alt="Governo do Estado da Bahia" loading="lazy"></div><p class="integ__nome">Governo do Estado da Bahia</p></li>
+<li class="integ"><div class="integ__logo"><span class="integ__semlogo" data-note="Logo autorizada a enviar (RN07). Até lá, aparece o nome por extenso." data-note-type="provisorio" aria-hidden="true">Secretaria da Educação</span></div><p class="integ__nome">Secretaria da Educação do Estado da Bahia</p></li>
+<li class="integ"><div class="integ__logo"><img src="assets/img/logos/mp-ba.png" alt="Ministério Público do Estado da Bahia (MP-BA)" loading="lazy"></div><p class="integ__nome">Ministério Público do Estado da Bahia (MP-BA)</p></li>
+<li class="integ"><div class="integ__logo"><img src="assets/img/logos/tce-ba.png" alt="Tribunal de Contas do Estado da Bahia (TCE-BA)" loading="lazy"></div><p class="integ__nome">Tribunal de Contas do Estado da Bahia (TCE-BA)</p></li>
+<li class="integ"><div class="integ__logo"><img src="assets/img/logos/tcm-ba.png" alt="Tribunal de Contas dos Municípios do Estado da Bahia (TCM-BA)" loading="lazy"></div><p class="integ__nome">Tribunal de Contas dos Municípios do Estado da Bahia (TCM-BA)</p></li>
+<li class="integ"><div class="integ__logo"><img src="assets/img/logos/upb.png" alt="União dos Municípios da Bahia (UPB)" loading="lazy"></div><p class="integ__nome">União dos Municípios da Bahia (UPB)</p></li>
+<li class="integ"><div class="integ__logo"><img src="assets/img/logos/sebrae.svg" alt="Serviço Brasileiro de Apoio às Micro e Pequenas Empresas (Sebrae)" loading="lazy"></div><p class="integ__nome">Serviço Brasileiro de Apoio às Micro e Pequenas Empresas (Sebrae)</p></li>
+<li class="integ"><div class="integ__logo"><img src="assets/img/logos/sesi.svg" alt="Serviço Social da Indústria (Sesi)" loading="lazy"></div><p class="integ__nome">Serviço Social da Indústria (Sesi)</p></li>
+<li class="integ"><div class="integ__logo"><img src="assets/img/logos/fetrabase.png" alt="Federação das Empresas de Transportes dos Estados da Bahia e Sergipe (Fetrabase)" loading="lazy"></div><p class="integ__nome">Federação das Empresas de Transportes dos Estados da Bahia e Sergipe (Fetrabase)</p></li>
+<li class="integ"><div class="integ__logo"><img src="assets/img/logos/undime.png" alt="União Nacional dos Dirigentes Municipais de Educação (Undime Bahia)" loading="lazy"></div><p class="integ__nome">União Nacional dos Dirigentes Municipais de Educação (Undime Bahia)</p></li>
+<li class="integ"><div class="integ__logo"><span class="integ__semlogo" data-note="Logo autorizada a enviar (RN07). Até lá, aparece o nome por extenso." data-note-type="provisorio" aria-hidden="true">Cátedra Sérgio Henrique Ferreira</span></div><p class="integ__nome">Cátedra Sérgio Henrique Ferreira da USP Ribeirão Preto</p></li>
+<li class="integ"><div class="integ__logo"><span class="integ__semlogo" data-note="Logo autorizada a enviar (RN07). Até lá, aparece o nome por extenso." data-note-type="provisorio" aria-hidden="true">Fundação Telefônica Vivo</span></div><p class="integ__nome">Fundação Telefônica Vivo</p></li>
+<li class="integ"><div class="integ__logo"><span class="integ__semlogo" data-note="Logo autorizada a enviar (RN07). Até lá, aparece o nome por extenso." data-note-type="provisorio" aria-hidden="true">Instituto Natura</span></div><p class="integ__nome">Instituto Natura</p></li>
+    </ul>
+  </div>
+</section>
+<nav class="pg-seq" aria-label="Continue no caderno"><div class="wrap pg-seq__in"><a class="pg-seq__ant" href="index.html" rel="prev"><span class="hand">página anterior</span><b>Página inicial</b></a><a class="pg-seq__prox" href="visao-e-proposito.html" rel="next"><span class="hand">próxima página</span><b>Visão e propósito</b><small>Sobre o Movimento</small></a></div></nav>
+</main>
+
+<!-- Quem faz parte: omitida nesta página, que já traz a grade completa das 14 instituições (RF13) -->
+
+
+<!-- @partial: janela do Painel da Educação dos Municípios (RF47) -->
+<dialog class="painel-modal" id="painel-modal" aria-labelledby="painel-titulo" data-note="Janela de conteúdo incorporado, usada pelo Painel da Educação dos Municípios (Power BI, RF47) e pelos álbuns de fotos dos encontros (Flickr, RF20). Carregamento, erro com &quot;Tentar novamente&quot;, pedido de permissão quando conteúdos de terceiros foram recusados nos cookies e link para abrir no site de origem. Na prévia hospedada no Claude a página roda num quadro protegido que bloqueia a incorporação de outros sites: a janela oferece o link direto. No portal publicado, o conteúdo carrega dentro da janela." data-note-type="provisorio">
+  <div class="painel-modal__cab">
+    <h2 id="painel-titulo">Painel da Educação dos Municípios</h2>
+    <a class="painel-modal__origem" data-painel-link href="#" target="_blank" rel="noopener"><span data-m="link">Abrir no Power BI</span><svg class="ico-ext" aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden"> (abre em nova aba)</span></a>
+    <button type="button" class="icon-btn" data-painel-fechar aria-label="Fechar"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+  </div>
+  <div class="painel-modal__corpo" id="painel-corpo">
+    <div class="painel-modal__estado" id="painel-carregando" hidden><span class="spinner" aria-hidden="true"></span><p>Carregando <span data-m="nome">o painel</span>…</p></div>
+    <div class="painel-modal__estado" id="painel-consent" hidden>
+      <p><b><span data-m="Nome">O painel</span> é um conteúdo incorporado do <span data-m="servico">Power BI (Microsoft)</span>.</b></p>
+      <p data-m-consent>Para ver aqui, é preciso permitir conteúdos incorporados de terceiros.</p>
+      <p class="painel-modal__acoes"><button type="button" class="btn btn--primary" data-painel-permitir>Permitir e carregar</button> <a class="btn btn--ghost" data-painel-link href="#" target="_blank" rel="noopener"><span data-m="link">Abrir no Power BI</span><svg class="ico-ext" aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden"> (abre em nova aba)</span></a></p>
+    </div>
+    <div class="painel-modal__estado" id="painel-erro" hidden>
+      <p><b>Não foi possível carregar <span data-m="nome">o painel</span>.</b></p>
+      <p>Verifique sua conexão e tente novamente, ou abra direto no site de origem.</p>
+      <p class="painel-modal__acoes"><button type="button" class="btn btn--primary" data-painel-tentar>Tentar novamente</button> <a class="btn btn--ghost" data-painel-link href="#" target="_blank" rel="noopener"><span data-m="link">Abrir no Power BI</span><svg class="ico-ext" aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden"> (abre em nova aba)</span></a></p>
+    </div>
+    <div class="painel-modal__estado" id="painel-externo" hidden>
+      <p><b>Nesta prévia, <span data-m="nome">o painel</span> abre no site de origem.</b></p>
+      <p>A prévia publicada no Claude não permite exibir conteúdo de outros sites dentro da página. No portal publicado, ele aparece nesta janela.</p>
+      <p class="painel-modal__acoes"><a class="btn btn--primary" data-painel-link href="#" target="_blank" rel="noopener"><span data-m="link">Abrir no Power BI</span><svg class="ico-ext" aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden"> (abre em nova aba)</span></a></p>
+    </div>
+  </div>
+</dialog>
+
+<!-- ============ @partial: layouts/partials/footer ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <img src="assets/brand/logo-movimento-negativa.svg" alt="Movimento Bahia pela Educação" width="652" height="260">
+        <p class="site-footer__contact"><a href="mailto:bahiapelaeducacao@fieb.org.br">bahiapelaeducacao@fieb.org.br</a></p>
+      </div>
+      <nav class="site-footer__map" aria-label="Mapa do site">
+<div class="f-col"><h2>Sobre o Movimento</h2><ul><li><a href="quem-somos.html" aria-current="page">Quem somos</a></li><li><a href="visao-e-proposito.html">Visão e propósito</a></li><li><a href="historico.html">Histórico</a></li><li><a href="como-atuamos.html">Como atuamos?</a></li><li><a href="o-desafio-da-bahia.html">O desafio da Bahia</a></li></ul></div>
+<div class="f-col"><h2>Nossas ações</h2><ul><li><a href="nossas-formacoes.html">Nossas formações</a><ul><li><a href="par.html">PAR — Programa Alfabetização Responsável</a></li><li><a href="encontros-territoriais.html">Encontros territoriais</a></li><li><a href="liderancas-transformacionais.html">Lideranças Transformacionais para a Escola</a></li><li><a href="alfabetizacao-inclusiva.html">Alfabetização Inclusiva</a></li></ul></li><li><a href="painel-da-educacao.html">Painel da Educação dos Municípios</a></li><li><a href="premio.html">Prêmio Município Alfabetizador</a></li></ul></div>
+<div class="f-col"><h2>Participe</h2><ul><li><a href="fale-conosco.html">Fale conosco</a></li></ul></div>
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <ul class="site-footer__legal">
+<li><a href="privacidade.html">Política de Privacidade</a></li>
+<li><a href="cookies.html">Política de Cookies</a></li>
+<li><a href="termos-de-uso.html">Termos de Uso</a></li>
+      </ul>
+      <p><button type="button" class="footer-cookie" data-cookie="abrir">Preferências de cookies</button> · © Movimento Bahia pela Educação</p>
+    </div>
+  </div>
+</footer>
+
+<a class="to-top" href="#topo" aria-label="Voltar ao topo"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+
+<!-- @partial: cookies (RF43) — escolha guardada só neste navegador nesta prévia -->
+<div class="cookie" id="cookie" role="region" aria-labelledby="cookie-titulo" hidden data-note="RF43: categorias Necessários e Conteúdo incorporado de terceiros, descritas na Política de Cookies (texto da Esfera em validação pelo Sistema FIEB, PD02). Sem cookies de métricas na Fase 1." data-note-type="provisorio">
+  <h2 id="cookie-titulo" class="cookie__title">Sua privacidade</h2>
+  <p class="cookie__text">Usamos cookies necessários para o portal funcionar e, com sua permissão, carregamos conteúdos de terceiros, como o Painel da Educação dos Municípios (Power BI), álbuns de fotos do Flickr e vídeos do YouTube. Este portal não usa cookies de métricas. <a href="cookies.html">Política de Cookies</a></p>
+  <div class="cookie__prefs" id="cookie-prefs" hidden>
+    <label class="cookie__opt"><input type="checkbox" checked disabled> <span><b>Necessários</b> sempre ativos</span></label>
+    <label class="cookie__opt"><input type="checkbox" id="ck-midia"> <span><b>Conteúdo incorporado de terceiros</b> Painel do Power BI, álbuns do Flickr e vídeos do YouTube</span></label>
+  </div>
+  <div class="cookie__actions">
+    <button type="button" class="btn btn--primary btn--sm" data-cookie="aceitar">Aceitar todos</button>
+    <button type="button" class="btn btn--ghost btn--sm" data-cookie="recusar">Recusar opcionais</button>
+    <button type="button" class="cookie__link" data-cookie="configurar" aria-expanded="false" aria-controls="cookie-prefs">Configurar</button>
+    <button type="button" class="btn btn--primary btn--sm" data-cookie="salvar" hidden>Salvar escolhas</button>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<!-- Ferramenta de revisão do protótipo (não faz parte do portal) -->
+<button type="button" class="review-toggle" id="review-toggle" aria-pressed="false">Notas de revisão</button>
+<aside class="review-panel" id="review-panel" hidden aria-label="Notas de revisão do protótipo">
+  <h2>Notas de revisão</h2>
+  <p>O que é confirmado, provisório ou ilustrativo nesta prévia. Clique em uma nota para localizá-la na página. As notas não fazem parte do portal.</p>
+  <div id="review-groups"></div>
+</aside>
+
+<script>window.ROTAS = {"/": {"nome": "Home", "arquivo": "index.html"}, "/sobre/quem-somos": {"nome": "Sobre o Movimento › Quem somos", "arquivo": "quem-somos.html"}, "/sobre/visao-e-proposito": {"nome": "Sobre o Movimento › Visão e propósito", "arquivo": "visao-e-proposito.html"}, "/sobre/historico": {"nome": "Sobre o Movimento › Histórico", "arquivo": "historico.html"}, "/sobre/como-atuamos": {"nome": "Sobre o Movimento › Como atuamos?", "arquivo": "como-atuamos.html"}, "/sobre/o-desafio-da-bahia": {"nome": "Sobre o Movimento › O desafio da Bahia", "arquivo": "o-desafio-da-bahia.html"}, "/acoes/formacoes": {"nome": "Nossas ações › Nossas formações", "arquivo": "nossas-formacoes.html"}, "/acoes/formacoes/par": {"nome": "Nossas ações › Nossas formações › PAR — Programa Alfabetização Responsável", "arquivo": "par.html"}, "/acoes/formacoes/encontros-territoriais": {"nome": "Nossas ações › Nossas formações › Encontros territoriais", "arquivo": "encontros-territoriais.html"}, "/acoes/formacoes/liderancas-transformacionais": {"nome": "Nossas ações › Nossas formações › Lideranças Transformacionais para a Escola", "arquivo": "liderancas-transformacionais.html"}, "/acoes/formacoes/alfabetizacao-inclusiva": {"nome": "Nossas ações › Nossas formações › Alfabetização Inclusiva", "arquivo": "alfabetizacao-inclusiva.html"}, "/acoes/painel-da-educacao": {"nome": "Nossas ações › Painel da Educação dos Municípios", "arquivo": "painel-da-educacao.html"}, "/acoes/premio": {"nome": "Nossas ações › Prêmio Município Alfabetizador", "arquivo": "premio.html"}, "/participe/fale-conosco": {"nome": "Participe › Fale conosco", "arquivo": "fale-conosco.html"}, "/privacidade": {"nome": "Rodapé › Política de Privacidade", "arquivo": "privacidade.html"}, "/cookies": {"nome": "Rodapé › Política de Cookies", "arquivo": "cookies.html"}, "/termos-de-uso": {"nome": "Rodapé › Termos de Uso", "arquivo": "termos-de-uso.html"}};
+window.MBE_CONFIG = {"painelUrl": "https://app.powerbi.com/view?r=eyJrIjoiMzAzMDZlNWEtZmUyMi00NTE4LWIzNjYtZjdjZjc3NjA3NTNiIiwidCI6ImQyNjI5ODQyLTU0YzMtNDFlYy1iYWI1LTJhZGVlYmU5MzljMyJ9", "painelPublicado": true, "atualizado": "17/11/2026", "par": [2900207, 2900702, 2901601, 2901908, 2902203, 2902252, 2907202, 2908903, 2912608, 2912707, 2913606, 2914000, 2918100, 2919009, 2919108, 2919900, 2920809, 2922250, 2922854, 2923100, 2924108, 2924207, 2924405, 2925600, 2926905, 2928307, 2929800, 2930204, 2932457, 2933059, 2933158], "encontros": [[2918407, "Juazeiro", "2026-03-10"], [2913606, "Ilhéus", "2026-03-31"], [2910800, "Feira de Santana", "2026-04-14"], [2933307, "Vitória da Conquista", "2026-04-28"], [2903201, "Barreiras", "2026-05-12"], [2910727, "Eunápolis", "2026-05-26"], [2927408, "Salvador", "2026-06-09"]], "premio": {"2025": {"Bronze": [2919405, 2921807], "Prata": [2902302, 2904506, 2912004, 2914208, 2929602, 2931053], "Ouro": [2920304, 2923035, 2925931]}, "2026": {"Bronze": [2901304, 2912301, 2902658, 2921005, 2910107, 2921104, 2923605, 2924702, 2900355, 2930006, 2903235, 2907558, 2909505, 2921450, 2923506, 2924504, 2931608, 2925931, 2932606, 2908101, 2920601, 2933455, 2921054, 2901809, 2922805, 2904050, 2931806], "Prata": [2914109, 2904506, 2908804, 2919058, 2910909, 2923035, 2910776, 2929602, 2908309, 2908705, 2909000, 2910206, 2918209, 2912202, 2918902, 2912004, 2904209, 2933174, 2906105, 2911600, 2910305, 2916708, 2926707, 2931053], "Ouro": [2919405, 2920304, 2916856, 2921807, 2904803, 2916906, 2924652, 2900504, 2917409], "Menção honrosa": [2916906, 2900504, 2906105, 2926905, 2901809, 2911600, 2919009, 2903235, 2910305, 2912202]}}};</script>
+<script src="assets/data/busca.js" defer></script>
+<script src="assets/data/centros.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — Movimento Bahia pela Educação</title>
+<meta name="description" content="Política de Segurança da Informação e Privacidade do Sistema FIEB (PL-CORP.001 v02), seguida pelo portal do Movimento Bahia pela Educação.">
+<meta name="robots" content="noindex, nofollow"><!-- protótipo: não indexar -->
+<script>/* ativa animações só com JS e sem preferência por redução de movimento; fallback se o script principal falhar */
+(function(d){if(!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("js-anim");setTimeout(function(){if(!window.__mbeReady)d.classList.remove("js-anim")},3000)}})(document.documentElement);</script>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/fase1.css">
+<link rel="stylesheet" href="assets/css/paginas.css">
+<link rel="icon" href="assets/brand/simbolo-favicon.svg" type="image/svg+xml">
+</head>
+<body data-pagina="privacidade">
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ============ @partial: layouts/partials/header ============ -->
+<header class="site-header" id="topo">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html" aria-label="Movimento Bahia pela Educação — página inicial">
+      <img src="assets/brand/logo-movimento.svg" alt="Movimento Bahia pela Educação" width="652" height="260">
+    </a>
+
+    <nav class="nav-desktop" aria-label="Menu principal">
+<ul class="nav-l1">
+  <li><a class="nav-l1__link" href="index.html">Home</a></li>
+  <li><button type="button" class="nav-l1__btn" aria-expanded="false" aria-controls="mega-1">Sobre o Movimento<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mega" id="mega-1" hidden><div class="wrap mega__inner">
+      <div class="mega__intro"><h2>Sobre o Movimento</h2><p>Quem integra o Movimento, sua visão, a trajetória desde 2025, como atua e o desafio da Bahia.</p></div>
+      <ul class="mega__cols">
+        <li class="nav-l2"><a href="quem-somos.html">Quem somos</a></li>
+        <li class="nav-l2"><a href="visao-e-proposito.html">Visão e propósito</a></li>
+        <li class="nav-l2"><a href="historico.html">Histórico</a></li>
+        <li class="nav-l2"><a href="como-atuamos.html">Como atuamos?</a></li>
+        <li class="nav-l2"><a href="o-desafio-da-bahia.html">O desafio da Bahia</a></li>
+      </ul></div></div></li>
+  <li><button type="button" class="nav-l1__btn" aria-expanded="false" aria-controls="mega-2">Nossas ações<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mega" id="mega-2" hidden><div class="wrap mega__inner">
+      <div class="mega__intro"><h2>Nossas ações</h2><p>Formações já realizadas, o Painel da Educação dos Municípios e o Prêmio Município Alfabetizador.</p></div>
+      <ul class="mega__cols">
+        <li class="nav-l2"><a href="nossas-formacoes.html">Nossas formações</a><ul class="nav-l3"><li><a href="par.html">PAR — Programa Alfabetização Responsável</a></li><li><a href="encontros-territoriais.html">Encontros territoriais</a></li><li><a href="liderancas-transformacionais.html">Lideranças Transformacionais para a Escola</a></li><li><a href="alfabetizacao-inclusiva.html">Alfabetização Inclusiva</a></li></ul></li>
+        <li class="nav-l2"><a href="painel-da-educacao.html">Painel da Educação dos Municípios</a></li>
+        <li class="nav-l2"><a href="premio.html">Prêmio Município Alfabetizador</a></li>
+      </ul></div></div></li>
+  <li><button type="button" class="nav-l1__btn" aria-expanded="false" aria-controls="mega-3">Participe<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mega" id="mega-3" hidden><div class="wrap mega__inner">
+      <div class="mega__intro"><h2>Participe</h2><p>Fale com a coordenação do Movimento.</p></div>
+      <ul class="mega__cols">
+        <li class="nav-l2"><a href="fale-conosco.html">Fale conosco</a></li>
+      </ul></div></div></li>
+</ul>
+    </nav>
+
+    <div class="site-header__tools">
+      <a class="btn btn--primary btn--sm header-contato" href="fale-conosco.html"><svg class="header-contato__ico" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="header-contato__txt">Fale conosco</span></a>
+      <button type="button" class="icon-btn" id="btn-busca" aria-expanded="false" aria-controls="painel-busca">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span class="icon-btn__label">Buscar</span>
+      </button>
+      <button type="button" class="icon-btn nav-toggle" id="btn-menu" aria-expanded="false" aria-controls="menu-mobile">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span class="icon-btn__label">Menu</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="search-panel" id="painel-busca" hidden>
+    <form class="wrap search-panel__form" role="search" id="form-busca" data-note="RF05: busca por palavra-chave no texto das páginas da Fase 1, com índice gerado automaticamente a cada publicação, feita no navegador, sem servidor. Ignora acentos e maiúsculas, a partir de 2 caracteres. Os resultados levam às páginas do protótipo." data-note-type="confirmado">
+      <label for="campo-busca" class="search-panel__label">Buscar no portal</label>
+      <div class="search-panel__row">
+        <input id="campo-busca" name="q" type="search" placeholder="Busque por formação, página ou município premiado" autocomplete="off" aria-describedby="busca-status">
+        <button type="submit" class="btn btn--primary">Buscar</button>
+      </div>
+      <p id="busca-status" class="search-panel__hint" role="status"></p>
+      <ol class="busca-res" id="busca-resultados"></ol>
+    </form>
+  </div>
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+</header>
+
+<div class="menu-mobile" id="menu-mobile" hidden>
+  <div class="menu-mobile__head">
+    <span class="menu-mobile__title">Menu</span>
+    <button type="button" class="icon-btn" id="btn-menu-fechar" aria-label="Fechar menu">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Menu principal (celular)">
+<ul class="m-l1">
+  <li><a class="m-l1__link" href="index.html">Home</a></li>
+  <li><button type="button" class="m-l1__btn" aria-expanded="false" aria-controls="msub-1">Sobre o Movimento<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="m-sub" id="msub-1" hidden><ul>
+      <li class="nav-l2"><a href="quem-somos.html">Quem somos</a></li>
+      <li class="nav-l2"><a href="visao-e-proposito.html">Visão e propósito</a></li>
+      <li class="nav-l2"><a href="historico.html">Histórico</a></li>
+      <li class="nav-l2"><a href="como-atuamos.html">Como atuamos?</a></li>
+      <li class="nav-l2"><a href="o-desafio-da-bahia.html">O desafio da Bahia</a></li>
+    </ul></div></li>
+  <li><button type="button" class="m-l1__btn" aria-expanded="false" aria-controls="msub-2">Nossas ações<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="m-sub" id="msub-2" hidden><ul>
+      <li class="nav-l2"><a href="nossas-formacoes.html">Nossas formações</a><ul class="nav-l3"><li><a href="par.html">PAR — Programa Alfabetização Responsável</a></li><li><a href="encontros-territoriais.html">Encontros territoriais</a></li><li><a href="liderancas-transformacionais.html">Lideranças Transformacionais para a Escola</a></li><li><a href="alfabetizacao-inclusiva.html">Alfabetização Inclusiva</a></li></ul></li>
+      <li class="nav-l2"><a href="painel-da-educacao.html">Painel da Educação dos Municípios</a></li>
+      <li class="nav-l2"><a href="premio.html">Prêmio Município Alfabetizador</a></li>
+    </ul></div></li>
+  <li><button type="button" class="m-l1__btn" aria-expanded="false" aria-controls="msub-3">Participe<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="m-sub" id="msub-3" hidden><ul>
+      <li class="nav-l2"><a href="fale-conosco.html">Fale conosco</a></li>
+    </ul></div></li>
+</ul>
+  </nav>
+</div>
+<div class="scrim" id="scrim" hidden></div>
+<!-- ============ /header ============ -->
+
+<main id="conteudo" tabindex="-1">
+<!-- @page: Política de Privacidade (RF44) — /privacidade. Texto integral da PL-CORP.001 v02, gerado por tools/importar_politica.py -->
+<section class="pol-capa papel" aria-labelledby="pol-titulo">
+  <div class="wrap pol-capa__in">
+    <nav class="breadcrumb" aria-label="Você está em"><ol><li><a href="index.html">Início</a></li><li aria-current="page">Política de Privacidade</li></ol></nav>
+    <p class="cab"><b>Política de Privacidade</b><span class="hand">PL-CORP.001</span></p>
+    <h1 id="pol-titulo" class="pol-capa__titulo">Política de Segurança da Informação e Privacidade do Sistema FIEB</h1>
+    <p class="pol-capa__meta">PL-CORP.001 · versão 02 · aprovada em 19/12/2024 por Carlos Henrique de Oliveira Passos</p>
+    <p class="pol-capa__lead" data-note="Texto de abertura da Esfera, para validação: explica ao visitante que o portal segue a política corporativa do Sistema FIEB. O documento enviado é a política de segurança da informação e privacidade do Sistema FIEB; não trata de cookies, do formulário Fale conosco, dos conteúdos incorporados (Power BI e YouTube) nem da localização usada no cabeçalho (RF44, observação). Recomenda-se um complemento específico do portal, validado pelo DPO (RF43, RN08, PD01, PD02)." data-note-type="provisorio">O portal do Movimento Bahia pela Educação, articulado pela FIEB, segue a Política de Segurança da Informação e Privacidade do Sistema FIEB, reproduzida na íntegra abaixo.</p>
+    <p class="pol-capa__dpo">Dúvidas sobre privacidade e dados pessoais: <a href="mailto:dpo@fieb.org.br">dpo@fieb.org.br</a> (Encarregado de Proteção de Dados do Sistema FIEB)</p>
+  </div>
+</section>
+
+<section class="pol section" aria-label="Texto da política">
+  <div class="wrap pol__in">
+    <nav class="pol__sumario" aria-labelledby="pol-sumario-titulo">
+      <h2 id="pol-sumario-titulo" class="pol__sumario-titulo">Nesta política</h2>
+      <ol><li><a href="#pol-1"><span class="hand">1.</span> Introdução</a></li><li><a href="#pol-2"><span class="hand">2.</span> Objetivos</a></li><li><a href="#pol-3"><span class="hand">3.</span> Definições</a></li><li><a href="#pol-4"><span class="hand">4.</span> Segurança da informação (SI) e tratamento dos dados pelas entidades do sistema FIEB</a></li><li><a href="#pol-5"><span class="hand">5.</span> Papéis e responsabilidades</a></li><li><a href="#pol-6"><span class="hand">6.</span> Dever de sigilo e confidencialidade das informações</a></li><li><a href="#pol-7"><span class="hand">7.</span> Do tratamento dos dados pessoais</a></li><li><a href="#pol-8"><span class="hand">8.</span> Direitos do titular</a></li><li><a href="#pol-9"><span class="hand">9.</span> Processos disciplinares</a></li><li><a href="#pol-10"><span class="hand">10.</span> Conscientização em segurança da informação</a></li><li><a href="#pol-11"><span class="hand">11.</span> Contato</a></li><li><a href="#pol-12"><span class="hand">12.</span> Guias complementares da política de segurança da informação</a></li><li><a href="#pol-13"><span class="hand">13.</span> Histórico de alterações</a></li></ol>
+    </nav>
+    <article class="pol__texto">
+<h2 id="pol-1" class="pol__h2"><span class="hand" aria-hidden="true">1.</span> INTRODUÇÃO</h2>
+<p>A Política de Segurança da Informação tem o compromisso com a proteção dos ativos de informação de propriedade ou sob salvaguarda das entidades que compõem o Sistema FIEB (FIEB, SESI/DR/BA, SENAI/DR/BA, IEL/BA e CIEB), preservando a confidencialidade, integridade e disponibilidade destas informações e, garantindo a transparência no tratamento dos dados. Estabelecendo um conjunto de diretrizes para implementar a Privacidade e Segurança de Dados, incluindo processos, procedimentos, estrutura organizacional e funções de software e hardware no uso dos dados do Sistema FIEB ou sob sua salvaguarda, garantindo os direitos do titular dos dados, assim como estabelecendo a padronização do uso, tratamento, e proteção das informações.</p>
+<p>A presente Política deve ser observada por todos que mantém vínculos com as entidades do Sistema FIEB, especialmente, seus dirigentes, força de trabalho, conselhos das entidades, sindicatos associados, fornecedores, parceiros e quaisquer pessoas físicas ou jurídicas que se relacionem direta ou indiretamente com FIEB, SESI/DR/BA, SENAI/DR/BA, IEL/BA e/ou CIEB.</p>
+<p>Foi elaborada pelas Comissões de Segurança da Informação do Sistema FIEB, observadas as normas técnicas ABNT NBR ISO/IEC 27001:2022 e 27002:2022, a legislação protetiva da privacidade e dos dados pessoais, e os requisitos de negócio das entidades.</p>
+<blockquote class="pol__citacao"><p>A segurança da informação é alcançada pela implementação de um conjunto adequado de controles, incluindo políticas, processos, procedimentos, estrutura organizacional e funções de software e hardware. Estes controles precisam ser estabelecidos, implementados, monitorados, analisados criticamente e melhorados, quando necessário para assegurar que os objetivos do negócio e a segurança da informação da organização sejam atendidos. (ABNT NBR ISO/IEC 27002:2022)</p></blockquote>
+<h2 id="pol-2" class="pol__h2"><span class="hand" aria-hidden="true">2.</span> OBJETIVOS</h2>
+<p><strong>2.1. Objetivo geral:</strong> Definir e padronizar o uso, tratamento, controle e proteção das informações que possam causar impactos no desempenho financeiro das Entidades do Sistema FIEB, na sua participação no mercado, na sua imagem, agregando valor à operação e eficiência na prestação de serviços ou no seu relacionamento com as partes interessadas.</p>
+<h3 class="pol__h3">2.2. Objetivos específicos:</h3>
+<ul class="pol__lista"><li>Definir o escopo da segurança da informação do Sistema FIEB;</li><li>Definir as responsabilidades das partes interessadas na preservação da segurança da informação;</li><li>Orientar as ações de segurança da informação das Entidades para reduzir riscos e garantir a integridade, confidencialidade e a disponibilidade das informações;</li></ul>
+<h2 id="pol-3" class="pol__h2"><span class="hand" aria-hidden="true">3.</span> DEFINIÇÕES</h2>
+<p>Para compreensão deste documento adotam-se os seguintes termos e definições:</p>
+<ul class="pol__lista"><li><strong>Agentes de tratamento:</strong> Controlador e Operador.</li><li><strong>Ameaça:</strong> Causa potencial de um incidente indesejado, que pode resultar em dano para um sistema ou organização.</li><li><strong>Anonimização:</strong> Utilização de meios técnicos que desassociam um dado ou informação pessoal de um indivíduo, de modo que o dado não possa mais ser vinculado, direta ou indiretamente, ao seu titular.</li><li><strong>ANPD:</strong> Autoridade Nacional de Proteção de Dados, órgão da administração pública federal, responsável, dentre outras competências, por: zelar pela proteção dos dados pessoais, elaborar as diretrizes da Política Nacional de Proteção de Dados Pessoais e da Privacidade, implementar e fiscalizar o cumprimento da LGPD, e aplicar as sanções por descumprimento da legislação protetiva de dados pessoais.</li><li><strong>Colaborador:</strong> todo e qualquer empregado do Sistema FIEB.</li><li><strong>Consentimento:</strong> Manifestação livre, informada e inequívoca pela qual o titular concorda com o tratamento de seus dados pessoais para uma finalidade determinada.</li><li><strong>Controlador:</strong> Pessoa jurídica a quem compete a tomada de decisões acerca do tratamento de dados pessoais pela organização.</li><li><strong>Coordenador de Segurança da Informação:</strong> Colaborador designado para operacionalizar os processos de Segurança da Informação.</li><li><strong>Dado pessoal:</strong> informação relacionada a pessoa física/natural identificada ou identificável, que poderá ser classificado como dado pessoal sensível, quando se referir a origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou biométrico, vinculado a uma pessoa natural.</li><li><strong>Encarregado/DPO:</strong> Pessoa física ou jurídica, indicada pelo controlador, para atuar como canal de comunicação entre o controlador, os titulares dos dados e a Autoridade Nacional de Proteção de Dados (ANPD), sendo responsável, principalmente. por: Atender as demandas dos titulares dos dados pessoais e adotar as providências, responder às notificações referentes ao tratamento de dados pela entidade, da ANPD e demais órgãos públicos competentes, e prestar as orientações aos colaboradores e terceiros quanto às boas práticas para tratamento de dados pessoais</li><li><strong>Força de trabalho do Sistema FIEB:</strong> Pessoas que compõem a organização e que contribuem para consecução de suas estratégias, objetivos e metas ou realizam atividades de aprendizagem, tais como empregados em tempo integral ou parcial, temporários, intermitentes, estagiários, autônomos que trabalham sob a coordenação direta da organização.</li><li><strong>Incidente de segurança da informação:</strong> Evento ou série de eventos indesejados ou inesperados, que comprometam as operações do negócio e segurança da informação.</li><li><strong>Informação ou dado pessoal anonimizado:</strong> Informação ou dado pessoal que não pode ser identificado, ou que não leve a identificação do indivíduo, considerando a utilização de meios técnicos razoáveis e disponíveis na ocasião de seu tratamento.</li><li><strong>Informação:</strong> Conjunto de dados, imagens, textos e quaisquer outras formas de representação dotadas de significado dentro de um contexto.</li><li><strong>Líderes:</strong> grupo formado por coordenadores, gerentes, superintendentes e diretores.</li><li><strong>Monitoramento:</strong> Acompanhamento e avaliação de dados e processos com objetivo específico de proteger o negócio, seus ativos e pessoas contra ameaças, prevenindo ataques ou outras manifestações que possam resultar em prejuízo para a organização.</li><li><strong>Multiplicador/Facilitador:</strong> colaborador responsável por disseminar esta política, seus guias e apoiar no seu cumprimento.</li><li><strong>Operador:</strong> Pessoa natural ou jurídica, de direito público ou privado, que realiza o tratamento de dados pessoais em nome do controlador.</li><li><strong>Recursos de Tecnologia da Informação:</strong> Referem-se a qualquer sistema de armazenamento ou processamento da informação, serviço ou infraestrutura, ou às instalações físicas que os abriguem, tais como: pen drives, smartphones, tablets, e-mail, planilhas, documentos, computadores, notebooks, equipamentos de rede, dentre outros.</li><li><strong>Relatório de Impacto:</strong> Documentação do Controlador que contém a descrição dos processos de tratamento de dados e informações que podem gerar riscos às liberdades civis e aos direitos fundamentais, bem como medidas, salvaguardas e mecanismos de mitigação de riscos.</li><li><strong>Software malicioso ou malware:</strong> Entende-se por software malicioso qualquer software que realiza ações nocivas aos sistemas, como vírus, worm, ransonware e afins.</li><li><strong>Terceiros:</strong> grupo composto por profissionais que não são empregados do Sistema FIEB, podendo ser vinculados a empresas contratadas ou não, como por exemplo os fornecedores, os prestadores de serviços, parceiros e clientes que possuam acesso às informações do Sistema FIEB.</li><li><strong>Titular do dado ou da informação pessoal:</strong> Pessoa física a quem se referem os dados ou informações pessoais que são objeto de tratamento.</li><li><strong>Tratamento:</strong> Toda operação realizada com dados e informações, como as que se referem a coleta, produção, recepção, classificação, utilização, acesso, reprodução, transmissão, distribuição, processamento, arquivamento, armazenamento, eliminação, avaliação, controle, modificação, comunicação, transferência, difusão ou extração.</li><li><strong>Uso compartilhado de dados ou informações:</strong> Compartilhamento de informações com outros agentes de tratamento, para desenvolvimento de suas atividades e para cumprimento de suas determinações legas ou regulatórias.</li><li><strong>Vulnerabilidade:</strong> Fragilidade de um ativo ou grupo de ativos que pode ser explorada por uma ou mais ameaças.</li></ul>
+<h2 id="pol-4" class="pol__h2"><span class="hand" aria-hidden="true">4.</span> SEGURANÇA DA INFORMAÇÃO (SI) E TRATAMENTO DOS DADOS PELAS ENTIDADES DO SISTEMA FIEB</h2>
+<p>A informação é um ativo das organizações, ou seja, é um bem que possui valor e, portanto, deve ser protegida, independentemente de ser escrita ou falada, impressa em papel, armazenada eletronicamente, transmitida pelo correio ou através de meios eletrônicos, ou até apresentada em filmes.</p>
+<blockquote class="pol__citacao"><p>A segurança da informação é alcançada através da preservação da integridade, confidencialidade e disponibilidade da informação, assim entendidos:</p></blockquote>
+<ul class="pol__lista"><li><strong>Integridade:</strong> é a garantia da preservação da informação e consistência dos dados ao longo do seu ciclo de vida.</li><li><strong>Confidencialidade:</strong> é a garantia de sigilo, ou seja, a informação é acessível somente a pessoas autorizadas a terem acesso.</li><li><strong>Disponibilidade:</strong> é a garantia de que a informação e os ativos associados estejam disponíveis para os usuários legítimos, sempre que necessário. Em conformidade com a legislação vigente, em especial com a Lei Federal nº 13.709/18 – Lei Geral de Proteção de Dados Pessoais (LGPD), o tratamento de dados pessoais deve observar os seguintes fundamentos:</li><li>Respeito à privacidade;</li><li>Autodeterminação informativa;</li><li>Liberdade de expressão;</li><li>Inviolabilidade da intimidade, honra e imagem;</li><li>Desenvolvimento econômico, tecnológico e inovação;</li><li>Livre iniciativa, livre concorrência e defesa do consumidor;</li><li>Direitos humanos, livre desenvolvimento da personalidade, dignidade e exercício da cidadania. As ações referentes a tratamento de dados pessoais pelas entidades do Sistema FIEB devem atentar para a finalidade e necessidade do tratamento, a adequação dos processos e tecnologias, a qualidade dos dados coletados, assegurando tratamento isonômico, livre acesso aos dados por seu titular, transparência nas ações e segurança das informações.</li></ul>
+<h2 id="pol-5" class="pol__h2"><span class="hand" aria-hidden="true">5.</span> PAPÉIS E RESPONSABILIDADES</h2>
+<p>Todos que mantém relações com as entidades do Sistema FIEB (dirigentes, força de trabalho, fornecedores, parceiros, representantes de sindicatos e organizações associadas) têm responsabilidade sobre as informações que acessam e manipulam nas instalações e nos sistemas destas entidades. A observância das diretrizes estabelecidas nesta política independe da existência de controles que, de forma total ou parcial, obriguem o seu cumprimento. A seguir constam especificadas as principais competências dos agentes desta Política de Segurança da Informação:</p>
+<h3 class="pol__h3">5.1. Controlador</h3>
+<p>O Controlador é o responsável por determinar as ações de tratamento de dados pela organização, podendo ser responsabilizado judicial e administrativamente em caso de incidentes de dados ou falha de segurança, ou de descumprimento à legislação protetiva da privacidade. Deste modo, constituem-se como controladores:</p>
+<ul class="pol__lista"><li>FIEB;</li><li>SESI/DR/BA;</li><li>SENAI/DR/BA;</li><li>IEL/BA;</li><li>CIEB. O Controlador possui as seguintes responsabilidades:</li></ul>
+<ol class="pol__lista" type="a"><li>Tomar decisões referentes aos processos de gestão, atentando para as diretrizes da segurança das informações e privacidade dos dados pessoais;</li><li>Adotar medidas de boas práticas para tratamento de dados pessoais pela organização, observadas as exigências legais;</li><li>Responsabilizar-se junto a instituições públicas e privadas acerca das decisões sobre segurança da informação da organização e tratamento de dados pessoais pela organização.</li></ol>
+<h3 class="pol__h3">5.2. Operador</h3>
+<p>Refere-se como Operador o terceiro, pessoa física ou jurídica, que realiza tratamento de dados pessoais em nome do Controlador, nos termos do instrumento contratual firmado. O Operador poderá ser responsabilizado solidariamente em caso de incidente de dados pessoais, devendo, portanto, adotar boas práticas de proteção de dados ao executar suas atividades. Compete ao Operador:</p>
+<ol class="pol__lista" type="a"><li>Realizar as atividades de tratamento das informações de acordo com as orientações do controlador;</li><li>Responsabilizar-se pelas ações executadas, respondendo pela inobservância das orientações do Controlador e/ou da legislação vigente, para o tratamento dos dados em nome do Controlador.</li></ol>
+<h3 class="pol__h3">5.3. Encarregado de Proteção de Dados/DPO</h3>
+<p>O Encarregado é o responsável pela execução das atividades de tratamento de dados pelo Controlador/Entidade. É a pessoa que detém conhecimento acerca de sistemas, processos e legislação sobre tratamento de dados e segurança das informações, cabendo-lhe adotar práticas condizentes com o negócio das entidades e realidade de mercado. As informações de identificação e contato do Encarregado devem ser amplamente divulgadas e inseridas em documentos relacionados ao tratamento de dados pessoais. Compete ao Encarregado de Proteção de Dados:</p>
+<ol class="pol__lista" type="a"><li>Gerir o recebimento das solicitações, reclamações e comunicações dos titulares dos dados, prestar esclarecimentos e adotar providências;</li><li>Receber notificações da Autoridade Nacional de Proteção de Dados e demais órgãos públicos e adotar providências;</li><li>Orientar dirigentes, colaboradores e prestadores de serviços contratados pelas entidades acerca das práticas a serem executadas para a proteção de dados pessoais e segurança das informações;</li><li>Executar as demais atribuições determinadas pelo Controlador, ou estabelecidas em normas complementares, ou requeridas pela ANPD;</li><li>Acompanhar o processo de adequação das atividades de tratamento de dados às exigências legais;</li><li>Fiscalizar as ações de tratamento de dados pessoais pelas entidades e indicar a necessidade de melhorias em processos e sistemas, para garantia da conformidade à lei.</li><li>Subsidiar o Controlador acerca das ações a serem adotadas para a garantia da segurança da informação e proteção dos dados pessoais;</li><li>Orientar as atividades desenvolvidas pelas Comissões de Segurança da Informação e operadores do Sistema de Gestão de Segurança da Informação.</li></ol>
+<h3 class="pol__h3">5.4. Comissões de Segurança da Informação</h3>
+<p>O Sistema de Gestão de Segurança da Informação é composto por duas Comissões coordenadas pelo Coordenador de Segurança da Informação, a Comissão Técnica e a Comissão Multidisciplinar, cujas competências encontram-se a seguir descritas:</p>
+<ol class="pol__lista" type="a"><li>Assessorar dirigentes e Encarregado sobre assuntos relativos à segurança da informação e proteção de dados pessoais;</li><li>Apoiar as ações do Encarregado para implementação de boas práticas para garantia da segurança das informações e proteção de dados pessoais na organização;</li><li>Propor revisões na Política de Segurança da Informação e documentos relacionados (guias, padrões complementares, acordo de confidencialidade, dentre outros) sempre que necessário;</li><li>Viabilizar que as atividades desempenhadas pelas entidades sejam executadas em conformidade com a Política de Segurança da Informação e legislação vigente;</li><li>Avaliar violações à Política de Segurança da Informação e informar ao Encarregado;</li><li>Avaliar a adequação de controles, metodologias e processos inerentes à segurança da informação, tais como análise/avaliação de riscos e classificação da informação, tabela de temporalidade de dados, dentre outros;</li><li>Analisar resultados de auditorias e ocorrências de incidentes de dados e falha de segurança da informação, e propor ações preventivas e/ou corretivas;</li><li>Propor capacitação em segurança da informação, definindo o formato, conteúdo, periodicidade e público-alvo dos treinamentos. NOTA: Para desempenhar suas atribuições, as Comissões de Segurança da Informação devem se reunir regularmente, com frequência a ser definida pelo Coordenador de Segurança da Informação, podendo, em casos excepcionais, reunir-se extraordinariamente para tratar de assuntos específicos ou urgentes.</li></ol>
+<h3 class="pol__h3">5.5. Coordenador de Segurança da Informação</h3>
+<ol class="pol__lista" type="a"><li>Coordenar os Comitês Técnico e Multidisciplinar do Sistema de Gestão de Segurança da Informação;</li><li>Fornecer o embasamento técnico necessário ao Controlador e ao Encarregado para subsidiar a tomada de decisões acerca de medidas de segurança das informações e proteção de dados;</li><li>Supervisionar as atividades de implantação dos controles e processos de segurança da informação indicadas pelas comissões de Segurança da Informação;</li><li>Acompanhar os processos de Segurança da Informação, avaliando periodicamente a efetividade desta política e dos controles adotados, utilizando como subsídios os registros, resultados de auditorias, dentre outros.</li></ol>
+<h3 class="pol__h3">5.6. Dirigentes, força de trabalho, fornecedores, membros dos conselhos das entidades, clientes e parceiros com acesso às informações corporativas</h3>
+<ol class="pol__lista" type="a"><li>Cumprir as determinações desta Política de Segurança da Informação, bem como seus respectivos documentos complementares;</li><li>Proteger a informação contra acesso não autorizado, divulgação, modificação, destruição ou interferência, em todo o seu ciclo de vida;</li><li>Notificar, com a maior brevidade possível, quaisquer incidentes de dados, fragilidades ou falhas de segurança ao Coordenador de Segurança da Informação e/ou ao Encarregado, para adoção das providências. A análise quanto a incidente de dados ou falha de segurança cabe exclusivamente ao corpo técnico competente, não devem ser testadas pelos usuários, apenas notificadas quando verificadas. Da mesma forma, ações corretivas não devem ser adotadas pelos usuários, mas, apenas, pelas pessoas autorizadas e designadas para a execução destas atividades no Sistema FIEB. O cumprimento desta Política de Segurança da Informação faz parte das responsabilidades de trabalho e, a partir da sua publicação, deve integrar contratos de trabalho e contratos com fornecedores em que suas disposições forem aplicáveis.</li></ol>
+<h3 class="pol__h3">5.7. Líderes</h3>
+<ol class="pol__lista" type="a"><li>Difundir a Política de Segurança da Informação e viabilizar, no âmbito de sua gestão, a educação, o treinamento e a conscientização sobre segurança da informação e proteção de dados;</li><li>Identificar as necessidades de segurança da informação e proteção de dados nos processos sob sua responsabilidade, incluindo a classificação das informações e temporalidade dos dados, inclusive propondo novas medidas de controle, quando necessárias;</li><li>Validar as solicitações de acesso aos dados, informações e sistemas de interesse para processos sob sua responsabilidade, revisando os acessos periodicamente;</li><li>Fornecer informações a respeito dos seus processos e serviços para composição de relatório de impacto ou outra documentação necessária;</li><li>Atuar de forma sistêmica para garantir os direitos dos titulares em conformidade com as regras do Controlador e legislação aplicável.</li></ol>
+<h3 class="pol__h3">5.8. Multiplicadores</h3>
+<ol class="pol__lista" type="a"><li>Divulgar o conteúdo desta Política em sua Unidade/área aos atuais e novos colaboradores, através de palestras, ambientações, seminários, reuniões, campanhas educativas, mutirões, meios de comunicação, dentre outros;</li><li>Apoiar no cumprimento da política e suas normas, assim como esclarecer as dúvidas relacionadas a este tema;</li><li>Operacionalizar os processos de Segurança da Informação, avaliando periodicamente a efetividade desta política e dos controles adotados.</li></ol>
+<h2 id="pol-6" class="pol__h2"><span class="hand" aria-hidden="true">6.</span> DEVER DE SIGILO E CONFIDENCIALIDADE DAS INFORMAÇÕES</h2>
+<p>As informações relacionadas a negócio são confidenciais e devem ser protegidas por todos os que tiverem acesso. O dever de sigilo e a garantia da confidencialidade das informações são diretrizes desta Política para o tratamento de dados pelas entidades do Sistema FIEB. Apenas podem ser divulgadas informações de conhecimento público, autorizadas por seu titular, ou quando a legislação autorizar a sua publicação. A força de trabalho deverá se submeter às diretrizes desta Política, a partir da assinatura do contrato de trabalho, devendo manter sigilo sobre as informações a que tiver acesso em decorrência da execução de suas atividades. Deverá ser formalizado Acordo de Confidencialidade com fornecedores, prestadores de serviços e parceiros que tenham acesso a quaisquer informações consideradas confidenciais e a dados pessoais, em decorrência do vínculo com as entidades do Sistema FIEB, a fim de que se comprometam a garantir a segurança e a confidencialidade das informações, observado o seguinte:</p>
+<ul class="pol__lista"><li>Informações sensíveis e dados pessoais compartilhados devem ser protegidos, utilizando boas práticas de governança e técnicas de segurança da informação e proteção de dados, a fim de evitar vazamentos e incidentes, por toda cadeia de tratamento da informação;</li><li>Os parceiros e fornecedores são responsáveis pelas boas práticas de governança e técnicas de segurança e proteção de dados dos seus processos;</li><li>O acordo de confidencialidade é valido durante todo o período de vigência do contrato e adicionalmente terá duração de 10 (dez) anos após o término da vigência ou obedecerá ao prazo que tiver sido definido no instrumento firmado;</li><li>Em quaisquer outros casos, o dever de confidencialidade e sigilo obedecerá a regulamentação que orienta a atividade específica, nas áreas de: saúde, educação, propriedade intelectual, dentre outras.</li></ul>
+<h2 id="pol-7" class="pol__h2"><span class="hand" aria-hidden="true">7.</span> DO TRATAMENTO DOS DADOS PESSOAIS</h2>
+<p>O tratamento de dados pessoais consiste nas operações de coleta, produção, recepção, classificação, utilização, acesso, reprodução, transmissão, distribuição, processamento, arquivamento, armazenamento, eliminação, avaliação ou controle da informação, modificação, comunicação, transferência, difusão ou extração das informações pela organização. Para o tratamento de dados pessoais, as entidades do Sistema FIEB deverão observar a legislação protetiva da privacidade e dos dados pessoais, em especial à Lei Federal nº 13.709/2018, e as seguintes diretrizes:</p>
+<ul class="pol__lista"><li>Implementar na organização estrutura de governança de dados, visando a melhor gestão das ações de segurança da informação e privacidade de dados;</li><li>Tratar somente os dados estritamente necessários para a execução do serviço;</li><li>Eliminar os dados, após o tratamento concluído/finalizado, salvo, se a legislação exigir a guarda das informações por período superior;</li><li>Sempre que possível, tratar os dados de forma anonimizada;</li><li>Observar os fundamentos e princípios da legislação na execução de suas atividades;</li><li>Preservar a segurança e o sigilo das Informações para o tratamento dos dados pessoais pela organização;</li><li>Utilizar/Manter os Sistemas processuais e digitais em conformidade com as boas práticas de Segurança da Informação, quanto à disponibilidade, confidencialidade e autenticidade, adicionalmente empregando sempre que possível os princípios de Security By Design, uso de segurança desde o início em seus processos, sistemas digitais e infraestrutura;</li><li>Tratar os dados exclusivamente para as finalidades definidas nos instrumentos firmados com os titulares dos dados ou em conformidade com a legislação;</li><li>Criar mecanismos de supervisão interna e externa para a preservação das boas práticas no tratamento das informações em seus processos e sistemas;</li><li>Manter um canal de comunicação direto com os titulares de dados, assim como a ANPD, para interlocução com o Encarregado;</li><li>Observar os direitos do titular dos dados e atender às suas solicitações, em conformidade com a lei;</li><li>Manter registros das operações de tratamento de dados pessoais realizadas pela organização;</li><li>Elaborar e disponibilizar relatório de impacto sobre a proteção de dados pessoais com os critérios mínimos determinados em conformidade com legislação vigente;</li><li>Comunicar à ANPD e ao titular a ocorrência de incidente de dados que possa acarretar riscos ou danos efetivos a este último;</li><li>Elaborar e executar planos de resposta a incidentes de dados;</li><li>Monitorar as atividades de tratamento de dados de modo contínuo e realizar avaliações periódicas;</li><li>Observar a estrutura, escala e volume de suas operações no processo de conformidade às exigências da legislação protetiva da privacidade e dos dados pessoais. Toda operação envolvendo dados pessoais realizada por esta organização deverá estar enquadrada nas hipóteses de tratamento previstas na legislação, e atender às finalidades legais e/ou especificadas no instrumento celebrado com o titular do dado.</li></ul>
+<h2 id="pol-8" class="pol__h2"><span class="hand" aria-hidden="true">8.</span> DIREITOS DO TITULAR</h2>
+<p>O tratamento de dados pessoais pelas entidades do Sistema FIEB deve resguardar os direitos do titular dos dados especificados na lei. Devem restar assegurados os direitos do titular de requerer, durante o período de tratamento de seus dados, as seguintes informações:</p>
+<ul class="pol__lista"><li>esclarecimentos sobre a possibilidade de não fornecer o consentimento e as consequências da negativa;</li><li>confirmação da existência do tratamento de seus dados pessoais;</li><li>Acesso facilitado às informações sobre o tratamento de seus dados, sendo-lhe garantido conhecimento sobre: os dados existentes e suas formas de tratamento; a finalidade e duração do tratamento; o compartilhamento dos dados e sua finalidade.</li><li>Atualização de seus dados, correção de dados incompletos, inexatos ou desatualizados.</li><li>Anonimização, bloqueio ou eliminação de dados desnecessários; excessivos ou tratados em desconformidade com o disposto na lei;</li><li>Eliminação dos dados – exclusão das informações pessoais dos bancos de dados e sistemas da organização- Direito ao esquecimento:<ul><li>Quando os dados coletados não forem mais necessários para cumprimento do objeto da coleta (finalidade alcançada) e das exigências legais;</li><li>Fim do período de tratamento;</li><li>Revogação do consentimento.</li></ul></li></ul>
+<h2 id="pol-9" class="pol__h2"><span class="hand" aria-hidden="true">9.</span> PROCESSOS DISCIPLINARES</h2>
+<p>Violações a esta Política de Segurança da Informação e demais documentos complementares sobre segurança da informação e proteção de dados pessoais serão analisados pelo, superior imediato da área na qual ocorreu o fato, que deverá informar a ocorrência ao Coordenador de Segurança da Informação e ao encarregado, para adoção das medidas cabíveis, considerando, a natureza, gravidade e impacto causado. Poderá ser recomendada a instauração de sindicância para averiguação dos fatos, quando houver indícios de ocorrência de infração funcional, sem prejuízo responsabilização penal e civil do suposto infrator. Concluída a apuração, conforme normas específicas das entidades do Sistema FIEB, e comprovada a ocorrência da infração, poderão ser aplicadas as penalidades previstas na legislação vigente e nos regulamentos internos, observada a proporcionalidade entre a infração e a sanção respectiva, e respeitado os primados da ampla defesa e do contraditório.</p>
+<h2 id="pol-10" class="pol__h2"><span class="hand" aria-hidden="true">10.</span> CONSCIENTIZAÇÃO EM SEGURANÇA DA INFORMAÇÃO</h2>
+<p>O Sistema FIEB se compromete a disseminar as informações da Política de Segurança da Informação as partes interessadas, parceiros, fornecedores e clientes.</p>
+<h2 id="pol-11" class="pol__h2"><span class="hand" aria-hidden="true">11.</span> CONTATO</h2>
+<p>Para dúvidas ou maiores informações/esclarecimentos a respeito desta política, deve-se contactar o DPO através do e-mail dpo@fieb.org.br.</p>
+<h2 id="pol-12" class="pol__h2"><span class="hand" aria-hidden="true">12.</span> GUIAS COMPLEMENTARES DA POLÍTICA DE SEGURANÇA DA INFORMAÇÃO</h2>
+<p>A Política de Segurança da Informação do Sistema FIEB é complementada por seus guias, que são considerados parte integrante desta política, conforme documentos disponíveis no ambiente de normativos institucionais, disponível na Intranet.</p>
+<h2 id="pol-13" class="pol__h2"><span class="hand" aria-hidden="true">13.</span> HISTÓRICO DE ALTERAÇÕES</h2>
+<ul class="pol__lista"><li>Alteração do título deste documento para Política de Segurança da Informação e Privacidade do Sistema FIEB.</li><li>Inclusão do item 12 - Guias complementares à Política de Segurança da Informação.</li><li>Atualização da referência das normas técnicas ABNT NBR ISO/IEC 27001:2022 e 27002:2022.</li></ul>
+      <p class="pol__fim"><a class="link-arrow" href="#conteudo">Voltar ao início da política</a></p>
+    </article>
+  </div>
+</section>
+</main>
+
+<!-- @partial: Quem faz parte — faixa de logos dos 14 integrantes, acima do rodapé em todas as páginas (RF42) -->
+<section class="members section" id="integrantes" data-busca="nao" aria-labelledby="members-titulo">
+  <div class="wrap">
+    <div class="section-head section-head--row" data-anim="rise">
+      <div>
+        <p class="eyebrow">Quem faz parte</p>
+        <h2 id="members-titulo" class="h2">Instituições integrantes</h2>
+      </div>
+      <a class="link-arrow" href="quem-somos.html">Quem somos</a>
+    </div>
+    <div class="logos" data-note="RF42 / RN07: 14 integrantes, na ordem dos Textos Etapa 1, sem link externo. Logos autorizados pelo cliente (20/11/2026). Secretaria da Educação, Cátedra Sérgio Henrique Ferreira, Fundação Telefônica Vivo e Instituto Natura aparecem com o nome até o envio dos arquivos." data-note-type="provisorio" data-anim="rise">
+      <div class="logos__viewport" id="logos-viewport" tabindex="0" role="region" aria-label="Logos das instituições integrantes (rolagem horizontal)">
+        <ul class="logos__track" id="logos-track">
+          <li class="logos__item"><em class="logos__papel">Articuladora</em><img src="assets/img/logos/fieb.png" alt="Federação das Indústrias do Estado da Bahia (FIEB)" decoding="async"></li>
+          <li class="logos__item"><img src="assets/img/logos/governo-bahia.png" alt="Governo do Estado da Bahia" decoding="async"></li>
+          <li class="logos__item logos__item--text"><b>Secretaria da Educação do Estado da Bahia</b></li>
+          <li class="logos__item"><img src="assets/img/logos/mp-ba.png" alt="Ministério Público do Estado da Bahia (MP-BA)" decoding="async"></li>
+          <li class="logos__item"><img src="assets/img/logos/tce-ba.png" alt="Tribunal de Contas do Estado da Bahia (TCE-BA)" decoding="async"></li>
+          <li class="logos__item"><img src="assets/img/logos/tcm-ba.png" alt="Tribunal de Contas dos Municípios do Estado da Bahia (TCM-BA)" decoding="async"></li>
+          <li class="logos__item"><img src="assets/img/logos/upb.png" alt="União dos Municípios da Bahia (UPB)" decoding="async"></li>
+          <li class="logos__item"><img src="assets/img/logos/sebrae.svg" alt="Serviço Brasileiro de Apoio às Micro e Pequenas Empresas (Sebrae)" decoding="async"></li>
+          <li class="logos__item"><img src="assets/img/logos/sesi.svg" alt="Serviço Social da Indústria (Sesi)" decoding="async"></li>
+          <li class="logos__item"><img src="assets/img/logos/fetrabase.png" alt="Federação das Empresas de Transportes dos Estados da Bahia e Sergipe (Fetrabase)" decoding="async"></li>
+          <li class="logos__item"><img src="assets/img/logos/undime.png" alt="União Nacional dos Dirigentes Municipais de Educação (Undime Bahia)" decoding="async"></li>
+          <li class="logos__item logos__item--text"><b>Cátedra Sérgio Henrique Ferreira da USP Ribeirão Preto</b></li>
+          <li class="logos__item logos__item--text"><b>Fundação Telefônica Vivo</b></li>
+          <li class="logos__item logos__item--text"><b>Instituto Natura</b></li>
+        </ul>
+      </div>
+      <div class="logos__controls">
+        <button type="button" class="logos__btn" data-logos="prev" aria-controls="logos-viewport"><span aria-hidden="true">←</span><span class="visually-hidden">Logos anteriores</span></button>
+        <button type="button" class="logos__btn logos__btn--play" data-logos="toggle" aria-controls="logos-viewport" aria-pressed="false"><span class="logos__pause-ico" aria-hidden="true"></span><span class="logos__label">Pausar</span></button>
+        <button type="button" class="logos__btn" data-logos="next" aria-controls="logos-viewport"><span aria-hidden="true">→</span><span class="visually-hidden">Próximos logos</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- @partial: janela do Painel da Educação dos Municípios (RF47) -->
+<dialog class="painel-modal" id="painel-modal" aria-labelledby="painel-titulo" data-note="Janela de conteúdo incorporado, usada pelo Painel da Educação dos Municípios (Power BI, RF47) e pelos álbuns de fotos dos encontros (Flickr, RF20). Carregamento, erro com &quot;Tentar novamente&quot;, pedido de permissão quando conteúdos de terceiros foram recusados nos cookies e link para abrir no site de origem. Na prévia hospedada no Claude a página roda num quadro protegido que bloqueia a incorporação de outros sites: a janela oferece o link direto. No portal publicado, o conteúdo carrega dentro da janela." data-note-type="provisorio">
+  <div class="painel-modal__cab">
+    <h2 id="painel-titulo">Painel da Educação dos Municípios</h2>
+    <a class="painel-modal__origem" data-painel-link href="#" target="_blank" rel="noopener"><span data-m="link">Abrir no Power BI</span><svg class="ico-ext" aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden"> (abre em nova aba)</span></a>
+    <button type="button" class="icon-btn" data-painel-fechar aria-label="Fechar"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+  </div>
+  <div class="painel-modal__corpo" id="painel-corpo">
+    <div class="painel-modal__estado" id="painel-carregando" hidden><span class="spinner" aria-hidden="true"></span><p>Carregando <span data-m="nome">o painel</span>…</p></div>
+    <div class="painel-modal__estado" id="painel-consent" hidden>
+      <p><b><span data-m="Nome">O painel</span> é um conteúdo incorporado do <span data-m="servico">Power BI (Microsoft)</span>.</b></p>
+      <p data-m-consent>Para ver aqui, é preciso permitir conteúdos incorporados de terceiros.</p>
+      <p class="painel-modal__acoes"><button type="button" class="btn btn--primary" data-painel-permitir>Permitir e carregar</button> <a class="btn btn--ghost" data-painel-link href="#" target="_blank" rel="noopener"><span data-m="link">Abrir no Power BI</span><svg class="ico-ext" aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden"> (abre em nova aba)</span></a></p>
+    </div>
+    <div class="painel-modal__estado" id="painel-erro" hidden>
+      <p><b>Não foi possível carregar <span data-m="nome">o painel</span>.</b></p>
+      <p>Verifique sua conexão e tente novamente, ou abra direto no site de origem.</p>
+      <p class="painel-modal__acoes"><button type="button" class="btn btn--primary" data-painel-tentar>Tentar novamente</button> <a class="btn btn--ghost" data-painel-link href="#" target="_blank" rel="noopener"><span data-m="link">Abrir no Power BI</span><svg class="ico-ext" aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden"> (abre em nova aba)</span></a></p>
+    </div>
+    <div class="painel-modal__estado" id="painel-externo" hidden>
+      <p><b>Nesta prévia, <span data-m="nome">o painel</span> abre no site de origem.</b></p>
+      <p>A prévia publicada no Claude não permite exibir conteúdo de outros sites dentro da página. No portal publicado, ele aparece nesta janela.</p>
+      <p class="painel-modal__acoes"><a class="btn btn--primary" data-painel-link href="#" target="_blank" rel="noopener"><span data-m="link">Abrir no Power BI</span><svg class="ico-ext" aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden"> (abre em nova aba)</span></a></p>
+    </div>
+  </div>
+</dialog>
+
+<!-- ============ @partial: layouts/partials/footer ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <img src="assets/brand/logo-movimento-negativa.svg" alt="Movimento Bahia pela Educação" width="652" height="260">
+        <p class="site-footer__contact"><a href="mailto:bahiapelaeducacao@fieb.org.br">bahiapelaeducacao@fieb.org.br</a></p>
+      </div>
+      <nav class="site-footer__map" aria-label="Mapa do site">
+<div class="f-col"><h2>Sobre o Movimento</h2><ul><li><a href="quem-somos.html">Quem somos</a></li><li><a href="visao-e-proposito.html">Visão e propósito</a></li><li><a href="historico.html">Histórico</a></li><li><a href="como-atuamos.html">Como atuamos?</a></li><li><a href="o-desafio-da-bahia.html">O desafio da Bahia</a></li></ul></div>
+<div class="f-col"><h2>Nossas ações</h2><ul><li><a href="nossas-formacoes.html">Nossas formações</a><ul><li><a href="par.html">PAR — Programa Alfabetização Responsável</a></li><li><a href="encontros-territoriais.html">Encontros territoriais</a></li><li><a href="liderancas-transformacionais.html">Lideranças Transformacionais para a Escola</a></li><li><a href="alfabetizacao-inclusiva.html">Alfabetização Inclusiva</a></li></ul></li><li><a href="painel-da-educacao.html">Painel da Educação dos Municípios</a></li><li><a href="premio.html">Prêmio Município Alfabetizador</a></li></ul></div>
+<div class="f-col"><h2>Participe</h2><ul><li><a href="fale-conosco.html">Fale conosco</a></li></ul></div>
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <ul class="site-footer__legal">
+<li><a href="privacidade.html" aria-current="page">Política de Privacidade</a></li>
+<li><a href="cookies.html">Política de Cookies</a></li>
+<li><a href="termos-de-uso.html">Termos de Uso</a></li>
+      </ul>
+      <p><button type="button" class="footer-cookie" data-cookie="abrir">Preferências de cookies</button> · © Movimento Bahia pela Educação</p>
+    </div>
+  </div>
+</footer>
+
+<a class="to-top" href="#topo" aria-label="Voltar ao topo"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+
+<!-- @partial: cookies (RF43) — escolha guardada só neste navegador nesta prévia -->
+<div class="cookie" id="cookie" role="region" aria-labelledby="cookie-titulo" hidden data-note="RF43: categorias Necessários e Conteúdo incorporado de terceiros, descritas na Política de Cookies (texto da Esfera em validação pelo Sistema FIEB, PD02). Sem cookies de métricas na Fase 1." data-note-type="provisorio">
+  <h2 id="cookie-titulo" class="cookie__title">Sua privacidade</h2>
+  <p class="cookie__text">Usamos cookies necessários para o portal funcionar e, com sua permissão, carregamos conteúdos de terceiros, como o Painel da Educação dos Municípios (Power BI), álbuns de fotos do Flickr e vídeos do YouTube. Este portal não usa cookies de métricas. <a href="cookies.html">Política de Cookies</a></p>
+  <div class="cookie__prefs" id="cookie-prefs" hidden>
+    <label class="cookie__opt"><input type="checkbox" checked disabled> <span><b>Necessários</b> sempre ativos</span></label>
+    <label class="cookie__opt"><input type="checkbox" id="ck-midia"> <span><b>Conteúdo incorporado de terceiros</b> Painel do Power BI, álbuns do Flickr e vídeos do YouTube</span></label>
+  </div>
+  <div class="cookie__actions">
+    <button type="button" class="btn btn--primary btn--sm" data-cookie="aceitar">Aceitar todos</button>
+    <button type="button" class="btn btn--ghost btn--sm" data-cookie="recusar">Recusar opcionais</button>
+    <button type="button" class="cookie__link" data-cookie="configurar" aria-expanded="false" aria-controls="cookie-prefs">Configurar</button>
+    <button type="button" class="btn btn--primary btn--sm" data-cookie="salvar" hidden>Salvar escolhas</button>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<!-- Ferramenta de revisão do protótipo (não faz parte do portal) -->
+<button type="button" class="review-toggle" id="review-toggle" aria-pressed="false">Notas de revisão</button>
+<aside class="review-panel" id="review-panel" hidden aria-label="Notas de revisão do protótipo">
+  <h2>Notas de revisão</h2>
+  <p>O que é confirmado, provisório ou ilustrativo nesta prévia. Clique em uma nota para localizá-la na página. As notas não fazem parte do portal.</p>
+  <div id="review-groups"></div>
+</aside>
+
+<script>window.ROTAS = {"/": {"nome": "Home", "arquivo": "index.html"}, "/sobre/quem-somos": {"nome": "Sobre o Movimento › Quem somos", "arquivo": "quem-somos.html"}, "/sobre/visao-e-proposito": {"nome": "Sobre o Movimento › Visão e propósito", "arquivo": "visao-e-proposito.html"}, "/sobre/historico": {"nome": "Sobre o Movimento › Histórico", "arquivo": "historico.html"}, "/sobre/como-atuamos": {"nome": "Sobre o Movimento › Como atuamos?", "arquivo": "como-atuamos.html"}, "/sobre/o-desafio-da-bahia": {"nome": "Sobre o Movimento › O desafio da Bahia", "arquivo": "o-desafio-da-bahia.html"}, "/acoes/formacoes": {"nome": "Nossas ações › Nossas formações", "arquivo": "nossas-formacoes.html"}, "/acoes/formacoes/par": {"nome": "Nossas ações › Nossas formações › PAR — Programa Alfabetização Responsável", "arquivo": "par.html"}, "/acoes/formacoes/encontros-territoriais": {"nome": "Nossas ações › Nossas formações › Encontros territoriais", "arquivo": "encontros-territoriais.html"}, "/acoes/formacoes/liderancas-transformacionais": {"nome": "Nossas ações › Nossas formações › Lideranças Transformacionais para a Escola", "arquivo": "liderancas-transformacionais.html"}, "/acoes/formacoes/alfabetizacao-inclusiva": {"nome": "Nossas ações › Nossas formações › Alfabetização Inclusiva", "arquivo": "alfabetizacao-inclusiva.html"}, "/acoes/painel-da-educacao": {"nome": "Nossas ações › Painel da Educação dos Municípios", "arquivo": "painel-da-educacao.html"}, "/acoes/premio": {"nome": "Nossas ações › Prêmio Município Alfabetizador", "arquivo": "premio.html"}, "/participe/fale-conosco": {"nome": "Participe › Fale conosco", "arquivo": "fale-conosco.html"}, "/privacidade": {"nome": "Rodapé › Política de Privacidade", "arquivo": "privacidade.html"}, "/cookies": {"nome": "Rodapé › Política de Cookies", "arquivo": "cookies.html"}, "/termos-de-uso": {"nome": "Rodapé › Termos de Uso", "arquivo": "termos-de-uso.html"}};
+window.MBE_CONFIG = {"painelUrl": "https://app.powerbi.com/view?r=eyJrIjoiMzAzMDZlNWEtZmUyMi00NTE4LWIzNjYtZjdjZjc3NjA3NTNiIiwidCI6ImQyNjI5ODQyLTU0YzMtNDFlYy1iYWI1LTJhZGVlYmU5MzljMyJ9", "painelPublicado": true, "atualizado": "17/11/2026", "par": [2900207, 2900702, 2901601, 2901908, 2902203, 2902252, 2907202, 2908903, 2912608, 2912707, 2913606, 2914000, 2918100, 2919009, 2919108, 2919900, 2920809, 2922250, 2922854, 2923100, 2924108, 2924207, 2924405, 2925600, 2926905, 2928307, 2929800, 2930204, 2932457, 2933059, 2933158], "encontros": [[2918407, "Juazeiro", "2026-03-10"], [2913606, "Ilhéus", "2026-03-31"], [2910800, "Feira de Santana", "2026-04-14"], [2933307, "Vitória da Conquista", "2026-04-28"], [2903201, "Barreiras", "2026-05-12"], [2910727, "Eunápolis", "2026-05-26"], [2927408, "Salvador", "2026-06-09"]], "premio": {"2025": {"Bronze": [2919405, 2921807], "Prata": [2902302, 2904506, 2912004, 2914208, 2929602, 2931053], "Ouro": [2920304, 2923035, 2925931]}, "2026": {"Bronze": [2901304, 2912301, 2902658, 2921005, 2910107, 2921104, 2923605, 2924702, 2900355, 2930006, 2903235, 2907558, 2909505, 2921450, 2923506, 2924504, 2931608, 2925931, 2932606, 2908101, 2920601, 2933455, 2921054, 2901809, 2922805, 2904050, 2931806], "Prata": [2914109, 2904506, 2908804, 2919058, 2910909, 2923035, 2910776, 2929602, 2908309, 2908705, 2909000, 2910206, 2918209, 2912202, 2918902, 2912004, 2904209, 2933174, 2906105, 2911600, 2910305, 2916708, 2926707, 2931053], "Ouro": [2919405, 2920304, 2916856, 2921807, 2904803, 2916906, 2924652, 2900504, 2917409], "Menção honrosa": [2916906, 2900504, 2906105, 2926905, 2901809, 2911600, 2919009, 2903235, 2910305, 2912202]}}};</script>
+<script src="assets/data/busca.js" defer></script>
+<script src="assets/data/centros.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
